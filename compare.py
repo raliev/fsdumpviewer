@@ -195,10 +195,25 @@ class DiffApp(QWidget):
         sorted_directories = {}
 
         for path, content in directories.items():
-            sorted_files = OrderedDict(sorted(content['files'].items()))
+            # Разделяем элементы на поддиректории и файлы
+            dirs = []
+            files = []
+
+            for filename, file_info in content['files'].items():
+                if file_info['permissions'].startswith('d'):
+                    dirs.append((filename, file_info))
+                else:
+                    files.append((filename, file_info))
+
+            # Сортируем поддиректории и файлы отдельно
+            sorted_dirs = OrderedDict(sorted(dirs))
+            sorted_files = OrderedDict(sorted(files))
+
+            # Объединяем отсортированные поддиректории и файлы в один список
+            sorted_all = OrderedDict(list(sorted_dirs.items()) + list(sorted_files.items()))
 
             sorted_directories[path] = {
-                'files': sorted_files,
+                'files': sorted_all,
                 'size': content['size']
             }
 
