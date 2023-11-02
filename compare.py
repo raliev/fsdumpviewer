@@ -221,7 +221,7 @@ class DiffApp(QWidget):
 
         if (self.file_path2.text() != ""):
             text2 = self.read_file_content(self.file_path2)
-            self.text2Struct = ls_lR_macOSParser2_preprocessStructure(text2);
+            self.text2Struct = ls_lR_macOSParser_preprocessStructure(text2);
             self.text2Struct = self.sort_by_name(self.text2Struct)
         self.add_dir_contents(self.result_table2, self.text2Struct, selected_path2);
 
