@@ -1,0 +1,1193 @@
+.:
+total 919
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    135 Oct 30 15:52 babel.config.json
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   3256 Nov 13  2022 CODE_OF_CONDUCT.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   9072 Sep 18 14:30 CONTRIBUTING.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    265 Sep 18 14:30 Dockerfile
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   1130 Sep 18 14:30 LICENSE.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    608 Sep 18 14:30 package.json
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 packages/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    286 Sep 18 14:30 postcss.config.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   2029 Sep 18 14:30 README.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 235839 Nov 13  2022 README.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    861 Sep 18 14:30 sonar-project.properties
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096      0 Nov  2 10:04 win-bash.txt
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 662771 Oct 30 15:52 yarn.lock
+
+./packages:
+total 12
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Nov  2 10:04 app/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Nov  2 10:04 lib/
+
+./packages/app:
+total 17
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 __test__/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 images/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  388 Oct 30 14:57 jest.config.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2558 Oct 30 15:52 package.json
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 src/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Oct 30 14:57 tools/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2533 Oct 30 14:57 webpack.config.js
+
+./packages/app/__test__:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 634 Sep 18 14:30 Titlebar.test.js
+
+./packages/app/images:
+total 404
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 73799 Sep 18 14:30 1AID.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 45513 Sep 18 14:30 1CRN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 97620 Sep 18 14:30 2BFU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 78803 Sep 18 14:30 4TNW.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 67369 Sep 18 14:30 5B40.png
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 colorer/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4762 Sep 18 14:30 logo.svg
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 mode/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18875 Sep 18 14:30 serotonin.png
+
+./packages/app/images/colorer:
+total 216
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8599 Sep 18 14:30 CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10504 Sep 18 14:30 CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15112 Sep 18 14:30 CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13277 Sep 18 14:30 CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17329 Sep 18 14:30 EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17668 Sep 18 14:30 HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12216 Sep 18 14:30 MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14623 Sep 18 14:30 OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18756 Sep 18 14:30 RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18280 Sep 18 14:30 SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16542 Sep 18 14:30 SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18784 Sep 18 14:30 TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9949 Sep 18 14:30 UN.png
+
+./packages/app/images/mode:
+total 104
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6190 Sep 18 14:30 BS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4657 Sep 18 14:30 CA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8553 Sep 18 14:30 CS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5398 Sep 18 14:30 LC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4368 Sep 18 14:30 LN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8372 Sep 18 14:30 QS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9647 Sep 18 14:30 SA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8520 Sep 18 14:30 SE.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3157 Sep 18 14:30 TR.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3400 Sep 18 14:30 TU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2314 Sep 18 14:30 TX.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9574 Sep 18 14:30 VW.png
+
+./packages/app/src:
+total 7
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 actions/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Oct  5 11:47 components/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 402 Sep 18 14:30 constants.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 containers/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 534 Sep 18 14:30 index.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 528 Sep 18 14:30 index.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Oct  5 11:47 reducers/
+
+./packages/app/src/actions:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 962 Sep 18 14:30 index.js
+
+./packages/app/src/components:
+total 12
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 834 Oct  5 11:47 App.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 632 Sep 18 14:30 App.scss
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 menu/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 viewer/
+
+./packages/app/src/components/menu:
+total 12
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 displayPreference/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 786 Sep 18 14:30 Menu.jsx
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 panelslist/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Oct  5 11:47 terminal/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 titlebar/
+
+./packages/app/src/components/menu/displayPreference:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1346 Sep 18 14:30 DisplayPreference.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  855 Sep 18 14:30 DisplayPreference.scss
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 thumbnail/
+
+./packages/app/src/components/menu/displayPreference/thumbnail:
+total 1
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 386 Sep 18 14:30 Thumbnail.jsx
+
+./packages/app/src/components/menu/panelslist:
+total 13
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 panels/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2789 Sep 18 14:30 PanelsList.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1363 Sep 18 14:30 PanelsList.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  404 Sep 18 14:30 PanelsListButton.jsx
+
+./packages/app/src/components/menu/panelslist/panels:
+total 42
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3417 Sep 18 14:30 AboutPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  379 Sep 18 14:30 AboutPanel.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2177 Sep 18 14:30 GalleryPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  611 Sep 18 14:30 GalleryPanel.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1880 Sep 18 14:30 InfoPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  212 Sep 18 14:30 InfoPanel.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  916 Sep 18 14:30 LoadPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  930 Sep 18 14:30 LoadPanel.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  655 Sep 18 14:30 RenderSettingsPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2920 Sep 18 14:30 ToolsPanel.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  601 Sep 18 14:30 ToolsPanel.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  800 Sep 18 14:30 ToolsPanelModal.jsx
+
+./packages/app/src/components/menu/terminal:
+total 5
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2071 Oct  5 11:47 Terminal.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  454 Oct  5 11:47 Terminal.scss
+
+./packages/app/src/components/menu/titlebar:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1696 Sep 18 14:30 Titlebar.jsx
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  745 Sep 18 14:30 TitleBar.scss
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 titlebarButton/
+
+./packages/app/src/components/menu/titlebar/titlebarButton:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 708 Sep 18 14:30 TitlebarButton.jsx
+
+./packages/app/src/components/viewer:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2112 Sep 18 14:30 MiewViewer.jsx
+
+./packages/app/src/containers:
+total 16
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 262 Sep 18 14:30 AboutPanelContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 487 Sep 18 14:30 DisplayColorContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 488 Sep 18 14:30 DisplayModeContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 259 Sep 18 14:30 GalleryPanelContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 252 Sep 18 14:30 InfoPanelContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 447 Sep 18 14:30 MenuContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 747 Sep 18 14:30 MiewViewerContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 338 Sep 18 14:30 PanelListContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 280 Sep 18 14:30 RenderSettingsPanelContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 238 Sep 18 14:30 TerminalContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 333 Sep 18 14:30 TitlebarButtonContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 313 Sep 18 14:30 TitlebarContainer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 253 Sep 18 14:30 ToolsPanelContainer.js
+
+./packages/app/src/reducers:
+total 6
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 184 Sep 18 14:30 index.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 692 Oct  5 11:47 info.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 640 Oct  5 11:47 visiblePanels.js
+
+./packages/app/tools:
+total 2
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  88 Oct 30 14:57 babel-jest-wrapper.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 267 Sep 18 14:30 open.js
+
+./packages/lib:
+total 372
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  28041 Sep 18 14:30 CHANGELOG.md
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 demo/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 dist/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 docs/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct 30 14:57 examples/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   1273 Sep 18 14:30 jsdoc.config.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   5912 Oct 30 15:52 package.json
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   2183 Sep 18 14:30 README.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 286736 Sep 18 14:30 README.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   2019 Oct 30 14:57 rollup.config.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct  5 11:47 src/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct 30 15:52 test/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct 30 14:57 tools/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 vendor/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   3388 Oct 30 14:57 webpack.config.js
+
+./packages/lib/demo:
+total 61
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11713 Sep 18 14:30 apple-touch-icon.png
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 data/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5430 Sep 18 14:30 favicon.ico
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 images/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   442 Sep 18 14:30 index.ejs
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36826 Sep 18 14:30 menu.html
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct  5 11:47 scripts/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct  5 11:47 styles/
+
+./packages/lib/demo/data:
+total 72
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 49856 Sep 18 14:30 1CRN.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18384 Sep 18 14:30 4FC1.mmtf
+
+./packages/lib/demo/images:
+total 409
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 73799 Sep 18 14:30 1AID.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 45513 Sep 18 14:30 1CRN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 97620 Sep 18 14:30 2BFU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 78803 Sep 18 14:30 4TNW.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 67369 Sep 18 14:30 5B40.png
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 colorer/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   433 Sep 18 14:30 empty_icon.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4762 Sep 18 14:30 logo.svg
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 material/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 mode/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 palette/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 resolution/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18875 Sep 18 14:30 serotonin.png
+
+./packages/lib/demo/images/colorer:
+total 216
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8599 Sep 18 14:30 CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10504 Sep 18 14:30 CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15112 Sep 18 14:30 CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13277 Sep 18 14:30 CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17329 Sep 18 14:30 EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17668 Sep 18 14:30 HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12216 Sep 18 14:30 MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14623 Sep 18 14:30 OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18756 Sep 18 14:30 RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18280 Sep 18 14:30 SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16542 Sep 18 14:30 SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18784 Sep 18 14:30 TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9949 Sep 18 14:30 UN.png
+
+./packages/lib/demo/images/material:
+total 128
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11914 Sep 18 14:30 BA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15811 Sep 18 14:30 DF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9696 Sep 18 14:30 FL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12621 Sep 18 14:30 GL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15141 Sep 18 14:30 ME.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14165 Sep 18 14:30 PL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16238 Sep 18 14:30 SF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6974 Sep 18 14:30 TN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14114 Sep 18 14:30 TR.png
+
+./packages/lib/demo/images/mode:
+total 104
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6190 Sep 18 14:30 BS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4657 Sep 18 14:30 CA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8553 Sep 18 14:30 CS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5398 Sep 18 14:30 LC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4368 Sep 18 14:30 LN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8372 Sep 18 14:30 QS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9647 Sep 18 14:30 SA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8520 Sep 18 14:30 SE.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3157 Sep 18 14:30 TR.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3400 Sep 18 14:30 TU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2314 Sep 18 14:30 TX.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9574 Sep 18 14:30 VW.png
+
+./packages/lib/demo/images/palette:
+total 40
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8375 Sep 18 14:30 CP.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12439 Sep 18 14:30 JM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11632 Sep 18 14:30 VM.png
+
+./packages/lib/demo/images/resolution:
+total 40
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 7719 Sep 18 14:30 high.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 7451 Sep 18 14:30 low.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 7553 Sep 18 14:30 medium.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5656 Sep 18 14:30 poor.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 7656 Sep 18 14:30 ultra.png
+
+./packages/lib/demo/scripts:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3361 Oct  5 11:47 index.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Oct  5 11:47 ui/
+
+./packages/lib/demo/scripts/ui:
+total 84
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 84958 Oct  5 11:47 Menu.js
+
+./packages/lib/demo/styles:
+total 16
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13689 Oct  5 11:47 main.scss
+
+./packages/lib/dist:
+total 9180
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    1421 Sep 18 14:30 Miew.css
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    2270 Sep 18 14:30 Miew.css.map
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1409474 Sep 18 14:30 Miew.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2612727 Sep 18 14:30 Miew.js.map
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096     909 Sep 18 14:30 Miew.min.css
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    2242 Sep 18 14:30 Miew.min.css.map
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  619692 Sep 18 14:30 Miew.min.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  780455 Sep 18 14:30 Miew.min.js.map
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1339018 Sep 18 14:30 Miew.module.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2612533 Sep 18 14:30 Miew.module.js.map
+
+./packages/lib/docs:
+total 240
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19406 Sep 18 14:30 getting-started-for-dummies.md
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 template/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3079 Sep 18 14:30 Thumbnails.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 93333 Sep 18 14:30 Thumbnails_Colorers.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 86296 Sep 18 14:30 Thumbnails_Materials.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 31031 Sep 18 14:30 Thumbnails_Modes.png
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 tutorials/
+
+./packages/lib/docs/template:
+total 5
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 135 Sep 18 14:30 publish.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 static/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 tmpl/
+
+./packages/lib/docs/template/static:
+total 0
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Sep 18 14:30 styles/
+
+./packages/lib/docs/template/static/styles:
+total 5
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  488 Sep 18 14:30 jsdoc-miew.css
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1537 Sep 18 14:30 prettify-tomorrow.css
+
+./packages/lib/docs/template/tmpl:
+total 48
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  239 Sep 18 14:30 augments.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6172 Sep 18 14:30 container.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4873 Sep 18 14:30 details.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   64 Sep 18 14:30 example.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  309 Sep 18 14:30 examples.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  735 Sep 18 14:30 exceptions.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1402 Sep 18 14:30 layout.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  274 Sep 18 14:30 mainpage.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  954 Sep 18 14:30 members.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2943 Sep 18 14:30 method.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3372 Sep 18 14:30 params.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2989 Sep 18 14:30 properties.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  314 Sep 18 14:30 returns.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  191 Sep 18 14:30 source.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  340 Sep 18 14:30 tutorial.tmpl
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  226 Sep 18 14:30 type.tmpl
+
+./packages/lib/docs/tutorials:
+total 33
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4689 Sep 18 14:30 embed.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4522 Sep 18 14:30 events.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3852 Sep 18 14:30 selectors.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  172 Sep 18 14:30 tutorials.json
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8588 Sep 18 14:30 url.md
+
+./packages/lib/examples:
+total 102
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  892 Oct  5 11:47 api.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1524 Sep 18 14:30 api.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  463 Oct  5 11:47 empty.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1343 Oct  5 11:47 events.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2988 Sep 18 14:30 events.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2452 Oct  5 11:47 fullscreen.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5068 Oct  5 11:47 grid.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1531 Sep 18 14:30 index.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  861 Oct  5 11:47 labels.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2973 Oct  5 11:47 load_from_string.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  364 Oct  5 11:47 miew_via_browserify.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  247 Sep 18 14:30 miew_via_browserify.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  762 Oct  5 11:47 miew_via_global.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   71 Sep 18 14:30 miew_via_node.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 miew_via_react/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  606 Oct 30 14:57 miew_via_react.config.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  320 Oct  5 11:47 miew_via_react.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   67 Sep 18 14:30 miew_via_react.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  882 Oct  5 11:47 miew_via_require.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  338 Sep 18 14:30 miew_via_webpack.config.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  316 Oct  5 11:47 miew_via_webpack.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  363 Sep 18 14:30 miew_via_webpack.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1302 Oct  5 11:47 multiple.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1111 Oct  5 11:47 options.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1045 Oct  5 11:47 options_fromAttr.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1029 Oct  5 11:47 options_fromURL.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2174 Oct  5 11:47 projected.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   84 Sep 18 14:30 README.md
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6328 Oct  5 11:47 sequence.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1103 Oct  5 11:47 terminal.html
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1237 Oct  5 11:47 terminal.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2097 Oct  5 11:47 transparent_background.html
+
+./packages/lib/examples/miew_via_react:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1514 Sep 18 14:30 App.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Oct  5 11:47 components/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 controls/
+
+./packages/lib/examples/miew_via_react/components:
+total 4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1152 Oct  5 11:47 ViewerContainer.js
+
+./packages/lib/examples/miew_via_react/controls:
+total 5
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 377 Sep 18 14:30 ChangeRepOptButton.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 719 Sep 18 14:30 Checkbox.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 532 Sep 18 14:30 InfoPanel.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 338 Sep 18 14:30 LoadButton.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 526 Sep 18 14:30 SpeedButton.js
+
+./packages/lib/src:
+total 306
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct  5 11:47 chem/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    828 Sep 18 14:30 chem.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  25174 Oct  5 11:47 ComplexVisual.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  10636 Sep 18 14:30 ComplexVisualEdit.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct  5 11:47 gfx/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096     74 Sep 18 14:30 index.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 io/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 127359 Oct 10 21:39 Miew.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    998 Sep 18 14:30 Miew.scss
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  10006 Sep 18 14:30 Miew-cli.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  12265 Sep 18 14:30 options.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  13244 Sep 18 14:30 options.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  26973 Sep 18 14:30 settings.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   4095 Sep 18 14:30 settings.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    919 Sep 18 14:30 Timer.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Oct  5 11:47 ui/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096      0 Sep 18 14:30 utils/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  16243 Sep 18 14:30 utils.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   6344 Sep 18 14:30 utils.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    673 Sep 18 14:30 Visual.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   1144 Sep 18 14:30 VolumeVisual.js
+
+./packages/lib/src/chem:
+total 225
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7122 Sep 18 14:30 AromaticLoopsMarker.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1847 Sep 18 14:30 Assembly.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2704 Sep 18 14:30 Atom.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2592 Sep 18 14:30 Atom.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2220 Sep 18 14:30 AtomPairs.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5365 Sep 18 14:30 AutoBond.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1964 Sep 18 14:30 BiologicalUnit.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4940 Sep 18 14:30 Bond.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5076 Sep 18 14:30 Chain.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24287 Oct  5 11:47 Complex.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3859 Sep 18 14:30 Component.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   473 Sep 18 14:30 DataSource.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8934 Sep 18 14:30 Element.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7873 Sep 18 14:30 HBondInfo.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1667 Sep 18 14:30 Helix.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   866 Sep 18 14:30 Molecule.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1587 Sep 18 14:30 Molecule.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8181 Sep 18 14:30 Residue.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5797 Sep 18 14:30 ResidueType.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14844 Sep 18 14:30 SecondaryStructureMap.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct  5 11:47 selectors/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6329 Sep 18 14:30 selectors.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17370 Sep 18 14:30 selectors.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1750 Sep 18 14:30 SGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1044 Sep 18 14:30 Sheet.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2306 Sep 18 14:30 Strand.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4486 Sep 18 14:30 StructuralElement.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10513 Oct  5 11:47 Volume.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14459 Sep 18 14:30 VoxelWorld.js
+
+./packages/lib/src/chem/selectors:
+total 40
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3457 Oct  5 11:47 selectArgs.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12537 Sep 18 14:30 selectArgs.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1249 Sep 18 14:30 selectOps.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4661 Sep 18 14:30 selectOps.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1302 Sep 18 14:30 selectorsBase.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3533 Sep 18 14:30 selectorsBase.test.js
+
+./packages/lib/src/gfx:
+total 154
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1278 Sep 18 14:30 Axes.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   211 Sep 18 14:30 capabilities.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 colorers/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1215 Sep 18 14:30 colorers.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1185 Sep 18 14:30 CSS2DObject.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4195 Sep 18 14:30 CSS2DRenderer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9693 Sep 18 14:30 FrameInfo.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct  5 11:47 geometries/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13618 Sep 18 14:30 gfxutils.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3464 Sep 18 14:30 materials.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct 30 14:57 meshes/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6103 Sep 18 14:30 meshutils.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 modes/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   959 Sep 18 14:30 modes.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   888 Oct  5 11:47 noiseTexture.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 objects/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 palettes/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   314 Sep 18 14:30 palettes.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1429 Sep 18 14:30 RCGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5533 Sep 18 14:30 Representation.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 shaders/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1444 Sep 18 14:30 Stats.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2251 Sep 18 14:30 ViewInterpolator.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3026 Sep 18 14:30 VolumeBounds.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3025 Sep 18 14:30 VolumeFarPlane.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13482 Sep 18 14:30 VolumeMesh.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 vr/
+
+./packages/lib/src/gfx/colorers:
+total 107
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1111 Sep 18 14:30 CarbonColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2231 Sep 18 14:30 CarbonColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  462 Sep 18 14:30 ChainColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2560 Sep 18 14:30 ChainColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1749 Sep 18 14:30 Colorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3181 Sep 18 14:30 Colorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1242 Sep 18 14:30 ConditionalColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  512 Sep 18 14:30 ConformationColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2461 Sep 18 14:30 ConformationColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  850 Sep 18 14:30 ElementColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3353 Sep 18 14:30 ElementColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  806 Sep 18 14:30 HydrophobicityColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3862 Sep 18 14:30 HydrophobicityColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  702 Sep 18 14:30 MoleculeColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3978 Sep 18 14:30 MoleuleColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1103 Sep 18 14:30 OccupancyColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5055 Sep 18 14:30 OccupancyColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  632 Sep 18 14:30 ResidueTypeColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2475 Sep 18 14:30 ResidueTypeColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1091 Sep 18 14:30 SecondaryStructureColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4567 Sep 18 14:30 SecondaryStructureColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  826 Sep 18 14:30 SequenceColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4416 Sep 18 14:30 SequenceColorer.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1570 Sep 18 14:30 TemperatureColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  414 Sep 18 14:30 UniformColorer.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1593 Sep 18 14:30 UniformColorer.test.js
+
+./packages/lib/src/gfx/geometries:
+total 233
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3643 Sep 18 14:30 ChunkedLinesGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4821 Sep 18 14:30 ChunkedObjectsGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18039 Oct  5 11:47 ContactSurface.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1031 Sep 18 14:30 ContactSurfaceGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1313 Sep 18 14:30 CrossGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5378 Oct  5 11:47 CylinderBufferGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1706 Sep 18 14:30 CylinderCollisionGeo.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7711 Sep 18 14:30 ExtrudedObjectsGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1068 Sep 18 14:30 geometries.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8214 Sep 18 14:30 Instanced2CCylindersGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2958 Sep 18 14:30 InstancedSpheresGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21544 Oct  5 11:47 IsoSurface.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   547 Sep 18 14:30 IsoSurfaceAtomColored.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11799 Sep 18 14:30 IsosurfaceBuildNormals.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1352 Sep 18 14:30 IsoSurfaceGeo.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1493 Sep 18 14:30 IsoSurfaceGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16307 Sep 18 14:30 IsoSurfaceMarchCube.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2601 Sep 18 14:30 LabelsGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1738 Sep 18 14:30 LinesGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4750 Sep 18 14:30 QuickSurfGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3485 Oct  5 11:47 RaycastableBufferGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2466 Sep 18 14:30 Simple2CCylindersGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1566 Oct  5 11:47 SimpleSpheresGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2290 Sep 18 14:30 SphereCollisionGeo.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33107 Oct  5 11:47 SSIsosurfaceGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6053 Sep 18 14:30 ThickLinesGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3568 Sep 18 14:30 ThinLinesGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1811 Sep 18 14:30 TwoColorLinesGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4160 Sep 18 14:30 VolumeSurfaceGeometry.js
+
+./packages/lib/src/gfx/meshes:
+total 28
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  300 Sep 18 14:30 InstancedMesh.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4052 Oct 30 14:57 MeshCreator.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  572 Sep 18 14:30 meshes.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  316 Sep 18 14:30 SimpleMesh.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1551 Sep 18 14:30 TextMesh.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  587 Sep 18 14:30 ThickLineMesh.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2530 Sep 18 14:30 TransformGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  726 Sep 18 14:30 UberObject.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1233 Sep 18 14:30 ZClippedMesh.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1042 Sep 18 14:30 ZSpriteMesh.js
+
+./packages/lib/src/gfx/modes:
+total 57
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  821 Sep 18 14:30 BallsAndSticksMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2513 Sep 18 14:30 CartoonMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  926 Sep 18 14:30 ContactSurfaceMode.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 groups/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  910 Sep 18 14:30 IsoSurfaceMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  372 Sep 18 14:30 IsoSurfaceSASMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  369 Sep 18 14:30 IsoSurfaceSESMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  759 Sep 18 14:30 LicoriceMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1026 Sep 18 14:30 LinesMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2625 Sep 18 14:30 Mode.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Sep 18 14:30 processors/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  732 Sep 18 14:30 QuickSurfaceMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1052 Sep 18 14:30 SurfaceMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  509 Sep 18 14:30 TextMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  338 Sep 18 14:30 TraceMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  747 Sep 18 14:30 TubeMode.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  387 Sep 18 14:30 VanDerWaalsMode.js
+
+./packages/lib/src/gfx/modes/groups:
+total 91
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2298 Sep 18 14:30 AromaticGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  789 Sep 18 14:30 AromaticLinesGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1496 Sep 18 14:30 AromaticTorusGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1016 Sep 18 14:30 AtomsGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  617 Sep 18 14:30 AtomsSASSESGroupStub.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1395 Sep 18 14:30 AtomsSphereGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  467 Sep 18 14:30 AtomsSurfaceGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4296 Sep 18 14:30 AtomsTextGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3880 Sep 18 14:30 BondsCylinderGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2158 Sep 18 14:30 BondsGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4462 Sep 18 14:30 BondsLinesGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6471 Sep 18 14:30 CartoonHelper.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2034 Oct 10 23:49 ChemGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  963 Sep 18 14:30 groups.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3457 Sep 18 14:30 GroupsFactory.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  431 Sep 18 14:30 NucleicCylindersGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2398 Sep 18 14:30 NucleicItemGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  519 Sep 18 14:30 NucleicSpheresGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1032 Sep 18 14:30 ResiduesGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3924 Sep 18 14:30 ResiduesSubseqGroup.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4104 Sep 18 14:30 ResiduesTraceGroup.js
+
+./packages/lib/src/gfx/modes/processors:
+total 23
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1840 Sep 18 14:30 AromaticProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1597 Sep 18 14:30 AtomsProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1599 Sep 18 14:30 BondsProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  247 Sep 18 14:30 NucleicProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  456 Sep 18 14:30 OrphanAtomsProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  606 Sep 18 14:30 processors.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1610 Sep 18 14:30 ResiduesProcessor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1812 Sep 18 14:30 SubseqsProcessor.js
+
+./packages/lib/src/gfx/objects:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2619 Sep 18 14:30 LinesObj.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2194 Sep 18 14:30 SceneObject.js
+
+./packages/lib/src/gfx/palettes:
+total 25
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  528 Sep 18 14:30 cpkPalette.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4781 Sep 18 14:30 jmolPalette.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9974 Sep 18 14:30 Palette.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2302 Sep 18 14:30 vmdPalette.js
+
+./packages/lib/src/gfx/shaders:
+total 133
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   227 Sep 18 14:30 Anaglyph.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   638 Sep 18 14:30 AnaglyphMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3304 Sep 18 14:30 AO.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1173 Sep 18 14:30 AOHorBlur.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   869 Sep 18 14:30 AOHorBlurMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3227 Sep 18 14:30 AOMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3353 Sep 18 14:30 AOVertBlurWithBlend.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1809 Sep 18 14:30 AOVertBlurWithBlendMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13265 Sep 18 14:30 FXAA.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1237 Sep 18 14:30 FXAAMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2080 Sep 18 14:30 Outline.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1393 Sep 18 14:30 OutlineMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   242 Sep 18 14:30 ScreenQuad.vert
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   400 Sep 18 14:30 ScreenQuadFromDistortionTex.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   210 Sep 18 14:30 ScreenQuadFromTex.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   331 Sep 18 14:30 ScreenQuadFromTexWithDistortion.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25361 Sep 18 14:30 Uber.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7248 Sep 18 14:30 Uber.vert
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11933 Sep 18 14:30 UberMaterial.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9343 Sep 18 14:30 Volume.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   159 Sep 18 14:30 Volume.vert
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    71 Sep 18 14:30 VolumeFaces.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   247 Sep 18 14:30 VolumeFaces.vert
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    66 Sep 18 14:30 VolumeFarPlane.frag
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   678 Sep 18 14:30 VolumeFarPlane.vert
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3769 Sep 18 14:30 VolumeMaterial.js
+
+./packages/lib/src/gfx/vr:
+total 12
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3498 Sep 18 14:30 createWebVRButton.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 8147 Sep 18 14:30 WebVRPoC.js
+
+./packages/lib/src/io:
+total 23
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 exporters/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 234 Oct 16 15:53 exporters.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 168 Sep 18 14:30 io.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Sep 18 14:30 loaders/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 328 Sep 18 14:30 loaders.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096   0 Oct  5 11:47 parsers/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 811 Sep 18 14:30 parsers.js
+
+./packages/lib/src/io/exporters:
+total 44
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  767 Sep 18 14:30 Exporter.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1651 Sep 18 14:30 Exporter.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1134 Sep 18 14:30 ExporterList.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3763 Sep 18 14:30 ExporterList.test.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Oct  5 11:47 fbx/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  899 Sep 18 14:30 FBXExporter.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 9171 Sep 18 14:30 PDBExporter.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5718 Sep 18 14:30 PDBResult.js
+
+./packages/lib/src/io/exporters/fbx:
+total 56
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1223 Sep 18 14:30 FBX1CGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4657 Sep 18 14:30 FBX2CCylinder.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   765 Sep 18 14:30 FBXGeometry.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13139 Oct  5 11:47 FBXInfoExtractor.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4488 Sep 18 14:30 FBXModel.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15473 Sep 18 14:30 FBXResult.js
+
+./packages/lib/src/io/loaders:
+total 42
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1237 Sep 18 14:30 FileLoader.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4529 Sep 18 14:30 FileLoader.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  372 Sep 18 14:30 ImmediateLoader.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  622 Sep 18 14:30 ImmediateLoader.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  673 Sep 18 14:30 Loader.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  956 Sep 18 14:30 Loader.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1239 Sep 18 14:30 LoaderList.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4005 Sep 18 14:30 LoaderList.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1785 Sep 18 14:30 XHRLoader.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5519 Sep 18 14:30 XHRLoader.test.js
+
+./packages/lib/src/io/parsers:
+total 198
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4929 Sep 18 14:30 CCP4Parser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16705 Oct  5 11:47 CIFParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19755 Oct  5 11:47 CMLParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4808 Sep 18 14:30 DSN6Parser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7405 Sep 18 14:30 GROParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   461 Sep 18 14:30 GROReader.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   698 Sep 18 14:30 GROReader.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14233 Oct  5 11:47 MMTFParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9287 Oct  5 11:47 MOL2Parser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   875 Sep 18 14:30 Parser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1607 Sep 18 14:30 Parser.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1532 Sep 18 14:30 ParserList.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5927 Sep 18 14:30 ParserList.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   358 Sep 18 14:30 ParsingError.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   878 Sep 18 14:30 ParsingError.test.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Sep 18 14:30 pdb/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15572 Oct  5 11:47 PDBParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3337 Sep 18 14:30 PDBStream.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5291 Sep 18 14:30 PDBStream.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2694 Sep 18 14:30 PubChemParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10023 Sep 18 14:30 readCIF.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3120 Sep 18 14:30 readCIF.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10029 Oct  5 11:47 SDFParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1486 Sep 18 14:30 SDFStream.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4780 Sep 18 14:30 VolumeModel.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2946 Sep 18 14:30 XYZParser.js
+
+./packages/lib/src/io/parsers/pdb:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1482 Sep 18 14:30 Remark290.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2335 Sep 18 14:30 Remark350.js
+
+./packages/lib/src/ui:
+total 36
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24992 Oct  5 11:47 ObjectControls.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6805 Sep 18 14:30 Picker.js
+
+./packages/lib/src/utils:
+total 154
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3181 Sep 18 14:30 Cookies.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5598 Sep 18 14:30 EntityList.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5164 Sep 18 14:30 EntityList.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2420 Sep 18 14:30 EventDispatcher.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9479 Sep 18 14:30 EventDispatcher.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   558 Sep 18 14:30 JobHandle.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3531 Sep 18 14:30 logger.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3239 Sep 18 14:30 logger.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   477 Sep 18 14:30 makeContextDependent.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12395 Sep 18 14:30 MiewCLIHelp.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14779 Sep 18 14:30 MiewCLIParser.jison
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 47350 Sep 18 14:30 MiewCLIParser.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3657 Sep 18 14:30 SelectionParser.jison
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23981 Sep 18 14:30 SelectionParser.js
+
+./packages/lib/test:
+total 12
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Sep 18 14:30 data/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Oct 16 23:44 e2e/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Sep 18 14:30 functional/
+
+./packages/lib/test/data:
+total 1724
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 170396 Sep 18 14:30 1AID.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  49856 Sep 18 14:30 1CRN.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 879104 Sep 18 14:30 1zlm.dsn6
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 123492 Sep 18 14:30 1zlm.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 306146 Sep 18 14:30 4V4F.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 223532 Sep 18 14:30 4XN6.pdb
+
+./packages/lib/test/e2e:
+total 627
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7031 Oct 16 23:44 api.e2e.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   125 Oct 16 23:44 defaultSettings.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1855 Oct 16 23:44 demo.e2e.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7355 Oct 16 23:44 exportfbx.e2e.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2720 Oct 16 23:44 fxs.e2e.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct 16 23:44 gfx/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct 16 23:44 golden/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   258 Oct 16 23:44 golden.cfg.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  5893 Sep 18 14:30 golden.js
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Nov  2 10:04 mismatch/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096     0 Oct 16 23:44 pages/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14519 Oct 16 23:44 rep.e2e.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   468 Sep 18 14:30 webdriver.cfg.js
+
+./packages/lib/test/e2e/gfx:
+total 16
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2965 Oct 16 23:44 planes.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 3042 Oct 16 23:44 postprocess.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2364 Oct 16 23:44 shadows.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  875 Oct  6 17:34 stereo.js
+
+./packages/lib/test/e2e/golden:
+total 5520
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22247 Oct 16 23:44 1aid.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18286 Oct 16 23:44 1aid_BS_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22262 Oct 16 23:44 1aid_BS_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33338 Oct 16 23:44 1aid_BS_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27858 Oct 16 23:44 1aid_BS_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29858 Oct 16 23:44 1aid_BS_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36844 Oct 16 23:44 1aid_BS_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29623 Oct 16 23:44 1aid_BS_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32227 Oct 16 23:44 1aid_BS_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36978 Oct 16 23:44 1aid_BS_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 37777 Oct 16 23:44 1aid_BS_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33130 Oct 16 23:44 1aid_BS_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 38759 Oct 16 23:44 1aid_BS_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20932 Oct 16 23:44 1aid_BS_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12581 Oct 16 23:44 1aid_CA_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20659 Oct 16 23:44 1aid_CA_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21554 Oct 16 23:44 1aid_CA_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17535 Oct 16 23:44 1aid_CA_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20659 Oct 16 23:44 1aid_CA_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22500 Oct 16 23:44 1aid_CA_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18158 Oct 16 23:44 1aid_CA_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20392 Oct 16 23:44 1aid_CA_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22131 Oct 16 23:44 1aid_CA_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23314 Oct 16 23:44 1aid_CA_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21207 Oct 16 23:44 1aid_CA_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24193 Oct 16 23:44 1aid_CA_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14364 Oct 16 23:44 1aid_CA_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15302 Oct 16 23:44 1aid_CS_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18240 Oct 16 23:44 1aid_CS_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26800 Oct 16 23:44 1aid_CS_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26292 Oct 16 23:44 1aid_CS_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 34175 Oct 16 23:44 1aid_CS_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33845 Oct 16 23:44 1aid_CS_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22413 Oct 16 23:44 1aid_CS_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27559 Oct 16 23:44 1aid_CS_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35280 Oct 16 23:44 1aid_CS_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33905 Oct 16 23:44 1aid_CS_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 28332 Oct 16 23:44 1aid_CS_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36008 Oct 16 23:44 1aid_CS_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17111 Oct 16 23:44 1aid_CS_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 22485 Oct 16 23:44 1aid_demo.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16908 Oct 16 23:44 1aid_LC_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20719 Oct 16 23:44 1aid_LC_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30731 Oct 16 23:44 1aid_LC_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25160 Oct 16 23:44 1aid_LC_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26207 Oct 16 23:44 1aid_LC_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32835 Oct 16 23:44 1aid_LC_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26177 Oct 16 23:44 1aid_LC_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29513 Oct 16 23:44 1aid_LC_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33032 Oct 16 23:44 1aid_LC_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 34294 Oct 16 23:44 1aid_LC_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30315 Oct 16 23:44 1aid_LC_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35131 Oct 16 23:44 1aid_LC_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19512 Oct 16 23:44 1aid_LC_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17343 Oct 16 23:44 1aid_LN_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19446 Oct 16 23:44 1aid_LN_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26366 Oct 16 23:44 1aid_LN_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24190 Oct 16 23:44 1aid_LN_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26685 Oct 16 23:44 1aid_LN_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 31379 Oct 16 23:44 1aid_LN_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13746 Oct 16 23:44 1aid_LN_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25709 Oct 16 23:44 1aid_LN_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30934 Oct 16 23:44 1aid_LN_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32149 Oct 16 23:44 1aid_LN_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26671 Oct 16 23:44 1aid_LN_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35036 Oct 16 23:44 1aid_LN_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18241 Oct 16 23:44 1aid_LN_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11019 Oct 16 23:44 1aid_QS_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13050 Oct 16 23:44 1aid_QS_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20151 Oct 16 23:44 1aid_QS_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21191 Oct 16 23:44 1aid_QS_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26973 Oct 16 23:44 1aid_QS_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 42275 Oct 16 23:44 1aid_QS_EL_BA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25163 Oct 16 23:44 1aid_QS_EL_DF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23432 Oct 16 23:44 1aid_QS_EL_FL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35319 Oct 16 23:44 1aid_QS_EL_GL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27314 Oct 16 23:44 1aid_QS_EL_ME.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25511 Oct 16 23:44 1aid_QS_EL_PL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26973 Oct 16 23:44 1aid_QS_EL_SF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23963 Oct 16 23:44 1aid_QS_EL_TN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36718 Oct 16 23:44 1aid_QS_EL_TR.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26938 Oct 16 23:44 1aid_QS_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15591 Oct 16 23:44 1aid_QS_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21483 Oct 16 23:44 1aid_QS_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29296 Oct 16 23:44 1aid_QS_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27024 Oct 16 23:44 1aid_QS_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23324 Oct 16 23:44 1aid_QS_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 28618 Oct 16 23:44 1aid_QS_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12451 Oct 16 23:44 1aid_QS_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13650 Oct 16 23:44 1aid_SA_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15847 Oct 16 23:44 1aid_SA_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23888 Oct 16 23:44 1aid_SA_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24441 Oct 16 23:44 1aid_SA_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30735 Oct 16 23:44 1aid_SA_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29808 Oct 16 23:44 1aid_SA_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19606 Oct 16 23:44 1aid_SA_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 24717 Oct 16 23:44 1aid_SA_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 31387 Oct 16 23:44 1aid_SA_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29869 Oct 16 23:44 1aid_SA_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27132 Oct 16 23:44 1aid_SA_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 31270 Oct 16 23:44 1aid_SA_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15294 Oct 16 23:44 1aid_SA_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14625 Oct 16 23:44 1aid_SE_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17938 Oct 16 23:44 1aid_SE_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26296 Oct 16 23:44 1aid_SE_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26825 Oct 16 23:44 1aid_SE_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32818 Oct 16 23:44 1aid_SE_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32661 Oct 16 23:44 1aid_SE_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21371 Oct 16 23:44 1aid_SE_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26953 Oct 16 23:44 1aid_SE_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33852 Oct 16 23:44 1aid_SE_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32360 Oct 16 23:44 1aid_SE_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29935 Oct 16 23:44 1aid_SE_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 34088 Oct 16 23:44 1aid_SE_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16765 Oct 16 23:44 1aid_SE_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10928 Oct 16 23:44 1aid_TR_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17213 Oct 16 23:44 1aid_TR_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18026 Oct 16 23:44 1aid_TR_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14625 Oct 16 23:44 1aid_TR_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17213 Oct 16 23:44 1aid_TR_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18232 Oct 16 23:44 1aid_TR_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14695 Oct 16 23:44 1aid_TR_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17130 Oct 16 23:44 1aid_TR_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18089 Oct 16 23:44 1aid_TR_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19193 Oct 16 23:44 1aid_TR_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17381 Oct 16 23:44 1aid_TR_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19924 Oct 16 23:44 1aid_TR_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12406 Oct 16 23:44 1aid_TR_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11472 Oct 16 23:44 1aid_TU_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18240 Oct 16 23:44 1aid_TU_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19024 Oct 16 23:44 1aid_TU_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15254 Oct 16 23:44 1aid_TU_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18240 Oct 16 23:44 1aid_TU_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19197 Oct 16 23:44 1aid_TU_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15629 Oct 16 23:44 1aid_TU_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18060 Oct 16 23:44 1aid_TU_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19139 Oct 16 23:44 1aid_TU_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 20256 Oct 16 23:44 1aid_TU_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18415 Oct 16 23:44 1aid_TU_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 21080 Oct 16 23:44 1aid_TU_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12979 Oct 16 23:44 1aid_TU_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1aid_TX_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17059 Oct 16 23:44 1aid_VW_CB.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19728 Oct 16 23:44 1aid_VW_CF.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 28564 Oct 16 23:44 1aid_VW_CH.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25516 Oct 16 23:44 1aid_VW_CO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30111 Oct 16 23:44 1aid_VW_EL.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 32621 Oct 16 23:44 1aid_VW_HY.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 23686 Oct 16 23:44 1aid_VW_MO.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27241 Oct 16 23:44 1aid_VW_OC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33916 Oct 16 23:44 1aid_VW_RT.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33336 Oct 16 23:44 1aid_VW_SQ.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26806 Oct 16 23:44 1aid_VW_SS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 34633 Oct 16 23:44 1aid_VW_TM.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18817 Oct 16 23:44 1aid_VW_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9148 Oct 16 23:44 1crn.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11970 Oct 16 23:44 1crn_4fc1.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13254 Oct 16 23:44 1crn_cl_bg.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 18419 Oct 16 23:44 1crn_cl_cf_bg.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16379 Oct 16 23:44 1crn_cl_fg_bg.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17706 Oct 16 23:44 1crn_cl_fg_tr.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  9309 Oct 16 23:44 1crn_demo.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13245 Oct 16 23:44 1crn_sha_BS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  8699 Oct 16 23:44 1crn_sha_CA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15218 Oct 16 23:44 1crn_sha_CS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11643 Oct 16 23:44 1crn_sha_LC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10831 Oct 16 23:44 1crn_sha_LN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14302 Oct 16 23:44 1crn_sha_QS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 16601 Oct 16 23:44 1crn_sha_SA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 14849 Oct 16 23:44 1crn_sha_SE.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6826 Oct 16 23:44 1crn_sha_TR.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  7584 Oct 16 23:44 1crn_sha_TU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 1crn_sha_TX.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 15567 Oct 16 23:44 1crn_sha_VW.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10145 Oct 16 23:44 1crn_ste_an.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6586 Oct 16 23:44 1crn_ste_di.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6349 Oct 16 23:44 1crn_ste_si.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12731 Oct 16 23:44 1crn_TU_SQ_LN_UN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13883 Oct 16 23:44 1crn_view.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 10338 Oct 16 23:44 1crn_zclip.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3770 Oct 16 23:44 1zlm.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4691 Oct 16 23:44 1zlm_aa.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4617 Oct 16 23:44 1zlm_aa_ao.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19366 Oct 16 23:44 1zlm_aa_ao_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11401 Oct 16 23:44 1zlm_aa_ao_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3447 Oct 16 23:44 1zlm_aa_ao_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19217 Oct 16 23:44 1zlm_aa_ao_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11362 Oct 16 23:44 1zlm_aa_ao_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2739 Oct 16 23:44 1zlm_aa_ao_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3317 Oct 16 23:44 1zlm_aa_ao_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19388 Oct 16 23:44 1zlm_aa_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11406 Oct 16 23:44 1zlm_aa_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3448 Oct 16 23:44 1zlm_aa_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19220 Oct 16 23:44 1zlm_aa_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11346 Oct 16 23:44 1zlm_aa_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2748 Oct 16 23:44 1zlm_aa_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3352 Oct 16 23:44 1zlm_aa_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3819 Oct 16 23:44 1zlm_ao.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17769 Oct 16 23:44 1zlm_ao_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11810 Oct 16 23:44 1zlm_ao_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2132 Oct 16 23:44 1zlm_ao_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17563 Oct 16 23:44 1zlm_ao_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11788 Oct 16 23:44 1zlm_ao_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3028 Oct 16 23:44 1zlm_ao_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3815 Oct 16 23:44 1zlm_ao_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17775 Oct 16 23:44 1zlm_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11823 Oct 16 23:44 1zlm_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2125 Oct 16 23:44 1zlm_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17566 Oct 16 23:44 1zlm_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11787 Oct 16 23:44 1zlm_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3020 Oct 16 23:44 1zlm_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3600 Oct 16 23:44 1zlm_sel.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4728 Oct 16 23:44 1zlm_sel_aa.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  4689 Oct 16 23:44 1zlm_sel_aa_ao.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19379 Oct 16 23:44 1zlm_sel_aa_ao_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11416 Oct 16 23:44 1zlm_sel_aa_ao_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3703 Oct 16 23:44 1zlm_sel_aa_ao_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19251 Oct 16 23:44 1zlm_sel_aa_ao_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11381 Oct 16 23:44 1zlm_sel_aa_ao_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3014 Oct 16 23:44 1zlm_sel_aa_ao_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3356 Oct 16 23:44 1zlm_sel_aa_ao_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19398 Oct 16 23:44 1zlm_sel_aa_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11392 Oct 16 23:44 1zlm_sel_aa_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3697 Oct 16 23:44 1zlm_sel_aa_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19252 Oct 16 23:44 1zlm_sel_aa_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11379 Oct 16 23:44 1zlm_sel_aa_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3015 Oct 16 23:44 1zlm_sel_aa_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3380 Oct 16 23:44 1zlm_sel_aa_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3646 Oct 16 23:44 1zlm_sel_ao.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17770 Oct 16 23:44 1zlm_sel_ao_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11820 Oct 16 23:44 1zlm_sel_ao_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2151 Oct 16 23:44 1zlm_sel_ao_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17592 Oct 16 23:44 1zlm_sel_ao_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11803 Oct 16 23:44 1zlm_sel_ao_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3088 Oct 16 23:44 1zlm_sel_ao_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3775 Oct 16 23:44 1zlm_sel_ao_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17781 Oct 16 23:44 1zlm_sel_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11831 Oct 16 23:44 1zlm_sel_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  2146 Oct 16 23:44 1zlm_sel_out.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17591 Oct 16 23:44 1zlm_sel_out_den.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 11802 Oct 16 23:44 1zlm_sel_out_den_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3073 Oct 16 23:44 1zlm_sel_out_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3807 Oct 16 23:44 1zlm_sel_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  3869 Oct 16 23:44 1zlm_ste.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  6846 Oct 16 23:44 4fc1.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 38438 Oct 16 23:44 4v4f.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 31724 Oct 16 23:44 4v4f_BS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 19992 Oct 16 23:44 4v4f_CA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 27653 Oct 16 23:44 4v4f_colors.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35874 Oct 16 23:44 4v4f_CS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 26795 Oct 16 23:44 4v4f_LC.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30888 Oct 16 23:44 4v4f_LN.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 30902 Oct 16 23:44 4v4f_params.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 25863 Oct 16 23:44 4v4f_precolors.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 34627 Oct 16 23:44 4v4f_prepare.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 33269 Oct 16 23:44 4v4f_QS.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35269 Oct 16 23:44 4v4f_SA.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 35615 Oct 16 23:44 4v4f_SE.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 29579 Oct 16 23:44 4v4f_selectors.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13485 Oct 16 23:44 4v4f_TR.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 17212 Oct 16 23:44 4v4f_TU.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 4v4f_TX.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 36500 Oct 16 23:44 4v4f_VW.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   561 Oct 16 23:44 empty.png
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  1444 Sep 18 14:30 missing.svg
+
+./packages/lib/test/e2e/mismatch:
+total 8
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2507 Oct 16 23:44 index.hbs
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1632 Sep 18 14:30 index_fbx.hbs
+
+./packages/lib/test/e2e/pages:
+total 12
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1380 Sep 18 14:30 empty.page.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4397 Oct 16 23:44 miew.page.js
+
+./packages/lib/test/functional:
+total 24
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096    0 Oct  5 11:47 data/
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 2341 Sep 18 14:30 dssp.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 7695 Sep 18 14:30 parsing.test.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1849 Sep 18 14:30 PDBExporter.test.js
+
+./packages/lib/test/functional/data:
+total 25464
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   56963 Sep 18 14:30 1CRN.cif
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   15146 Sep 18 14:30 1CRN.gro
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    7885 Sep 18 14:30 1CRN.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   34024 Sep 18 14:30 1CRN.mol2
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   49856 Sep 18 14:30 1CRN.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   10148 Sep 18 14:30 1CRN.xyz
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   70110 Sep 18 14:30 1K1R.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  376116 Sep 18 14:30 1MVA.cif
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   52070 Sep 18 14:30 1MVA.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  305696 Sep 18 14:30 1MVA.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5164553 Sep 18 14:30 2MPZ.cif
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  475508 Sep 18 14:30 2MPZ.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 4313774 Sep 18 14:30 2MPZ.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5804332 Sep 18 14:30 4NRE.ccp4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1659713 Sep 18 14:30 4NRE.cif
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1175552 Sep 18 14:30 4NRE.dsn6
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  116165 Sep 18 14:30 4NRE.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1456402 Sep 18 14:30 4NRE.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1980768 Sep 18 14:30 4RTN.ccp4
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  369152 Sep 18 14:30 4RTN.dsn6
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1329292 Sep 18 14:30 5B40.cif
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  117463 Sep 18 14:30 5B40.mmtf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1047304 Sep 18 14:30 5B40.pdb
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    2647 Sep 18 14:30 complexTestData.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   13355 Sep 18 14:30 serotonin.json
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    2697 Sep 18 14:30 serotonin.mol2
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    4643 Sep 18 14:30 serotonin.sdf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    1260 Sep 18 14:30 serotonin.xyz
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096    1554 Oct  5 11:47 volumeTestData.js
+
+./packages/lib/tools:
+total 52
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 6009 Sep 18 14:30 atom_types.csv
+-rwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 2223 Sep 18 14:30 atom_types.py*
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096   58 Oct 30 14:57 babel-register-wrapper.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  912 Sep 18 14:30 config.js
+-rwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 1728 Sep 18 14:30 fetch.py*
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  311 Sep 18 14:30 golden_rename.py
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1523 Sep 18 14:30 jison.js
+-rwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096  693 Sep 18 14:30 mmtf2json.py*
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  267 Sep 18 14:30 open.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 5211 Sep 18 14:30 pdbfreq.py
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1780 Sep 18 14:30 residue_types.csv
+-rwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 1274 Sep 18 14:30 residue_types.py*
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  378 Sep 18 14:30 serve.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 1139 Sep 18 14:30 version.js
+
+./packages/lib/vendor:
+total 4
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Sep 18 14:30 fonts/
+drwxr-xr-x 1 EPAM+Pavel_Smirnov1 4096 0 Sep 18 14:30 js/
+
+./packages/lib/vendor/fonts:
+total 220
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  20127 Sep 18 14:30 glyphicons-halflings-regular.eot
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 109025 Sep 18 14:30 glyphicons-halflings-regular.svg
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  45404 Sep 18 14:30 glyphicons-halflings-regular.ttf
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  23424 Sep 18 14:30 glyphicons-halflings-regular.woff
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096  18028 Sep 18 14:30 glyphicons-halflings-regular.woff2
+
+./packages/lib/vendor/js:
+total 32
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 13311 Sep 18 14:30 mmtf.js
+-rw-r--r-- 1 EPAM+Pavel_Smirnov1 4096 12374 Sep 18 14:30 Smooth.js

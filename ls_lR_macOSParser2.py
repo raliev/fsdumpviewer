@@ -8,6 +8,8 @@ def preprocessStructure(input_text):
     for line in lines:
         if not line:
             continue
+        if line.startswith(" Directory of "):
+            raise Exception("this is not a MacOS/Linux format")
         parts = line.split()
         # Проверяем минимальное количество частей, чтобы отсечь неинформативные строки
         if len(parts) < 9:

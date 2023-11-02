@@ -1,3 +1,4 @@
+import re
 import sys
 from collections import OrderedDict
 
@@ -7,12 +8,12 @@ from PyQt5.QtGui import QBrush
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog
 from PyQt5.QtWidgets import QTableWidgetItem
-
+from parser import parser
 from docompare import compare
-from ls_lR_macOSParser import preprocessStructure as ls_lR_macOSParser_preprocessStructure;
-from ls_lR_macOSParser2 import preprocessStructure as ls_lR_macOSParser2_preprocessStructure;
-from setupUI import setupUI
-from structure_manipulations import add_marks_to_all_folders;
+from setupUI import setupUI, CSV, BASH_ZIP_SELECTED, BASH_COPY_SELECTED_TO_CURRENT, BASH_COPY_SELECTED_TO_ANOTHER
+from structure_manipulations import add_marks_to_all_folders, get_last_element, remove_last_folder;
+import shlex
+
 
 text1 = None
 text2 = None
@@ -33,6 +34,90 @@ class DiffApp(QWidget):
 
     def setFocusTo(self, widget):
         widget.setFocus()
+
+    def exportCSV(self, lines, exportFileName):
+        with open(exportFileName, "w", encoding="utf-8") as file:
+            for line in lines:
+                file.write(line + "\n")
+
+    def produceFilesForExport(self, directories, path, any=0):
+        selected_files = []
+        if directories.get(path) is None or directories[path].get('files') is None:
+            print ("unexpected: "+path+" doesn't exist in the memory structures (or path -> files)")
+            return selected_files;
+        for filename, file_info in directories[path]['files'].items():
+            if file_info['selected'] == 1 or any:
+                if not file_info['permissions'].startswith('d'):
+                    file_to_export = path + filename
+                    selected_files.append(file_to_export)
+                else:
+                    selected_files.extend(self.produceFilesForExport(directories, path + filename + "/", any=1))
+            else:
+                if file_info['permissions'].startswith('d'):
+                    selected_files.extend(self.produceFilesForExport(directories, path + filename + "/", any=0))
+        return selected_files;
+
+    def export_zip_commands(self, selected_files, export_file_name, group_size):
+        with open(export_file_name, "w", encoding="utf-8") as file:
+            for i in range(0, len(selected_files), group_size):
+                group_files = [shlex.quote(file) for file in selected_files[i:i+group_size]]
+                zip_command = f"zip myzip.zip {' '.join(group_files)}\n"
+                file.write(zip_command)
+                print(zip_command.strip())
+
+    def exportZIPSelected(self, lines, exportFileName):
+        self.export_zip_commands(lines, exportFileName, 10)
+
+    def exportCopySelectedToCurrent(self, lines, exportFileName):
+        with open(exportFileName, "w", encoding="utf-8") as file:
+            for line in lines:
+                file.write("cp " + shlex.quote(line) + " .\n")
+
+    def exportCopySelectedToAnotherPanel(self, lines, exportFileName, anotherPanelNo):
+        with open(exportFileName, "w", encoding="utf-8") as file:
+            for line in lines:
+                ourPanelSelectedPath = self.shortest_path1;
+                anotherPanelSelectedPath = self.shortest_path2;
+                if (anotherPanelNo == 1) :
+                    ourPanelSelectedPath = self.shortest_path2;
+                    anotherPanelSelectedPath = self.shortest_path1;
+                targetLocation = anotherPanelSelectedPath + line.removeprefix(ourPanelSelectedPath)
+                file.write("cp " + shlex.quote(line) + " " + shlex.quote(targetLocation) + "\n")
+    def export(self, directories, exportFileName, mode, shortest_path, panelNo):
+        selected_files = self.produceFilesForExport(directories, shortest_path, any=0)
+        if mode == CSV:
+            self.exportCSV(selected_files, exportFileName)
+        if mode == BASH_ZIP_SELECTED:
+            self.exportZIPSelected(selected_files, exportFileName)
+        if mode == BASH_COPY_SELECTED_TO_CURRENT:
+            self.exportCopySelectedToCurrent(selected_files, exportFileName)
+        if mode == BASH_COPY_SELECTED_TO_ANOTHER:
+            anotherPanel = 2;
+            if panelNo == 2:
+                anotherPanel = 1;
+            self.exportCopySelectedToAnotherPanel(selected_files, exportFileName, anotherPanel)
+
+    def askForFileName(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getSaveFileName(self,
+                                                  "QFileDialog.getSaveFileName()",
+                                                  "", # Стартовый путь
+                                                  "All Files (*);;Text Files (*.txt)", # Фильтры для форматов файлов
+                                                  options=options)
+        if fileName:
+            print(f"Save file name: {fileName}")
+            return fileName;
+        return None;
+    def export_selected2(self):
+        fileName = self.askForFileName()
+        if fileName is not None:
+            self.export(self.text2Struct, fileName, self.exportSelectedAsSelectBox2.currentText(), self.shortest_path2, panelNo=2);
+
+    def export_selected1(self):
+        fileName = self.askForFileName()
+        if fileName is not None:
+            self.export(self.text1Struct, fileName, self.exportSelectedAsSelectBox1.currentText(), self.shortest_path1, panelNo=1);
 
     def eventFilter(self, source, event):
         if (source == self.result_table1 or source == self.result_table2) and event.type() == QEvent.KeyPress:
@@ -57,9 +142,11 @@ class DiffApp(QWidget):
 
     def setTableSpecificData(self, source, sel_path):
         if (source == self.result_table1):
-            self.selected_path1 = sel_path;
+            self.update_currentpath1(sel_path);
+            self.update_currentpath1_inputbox(sel_path);
         if (source == self.result_table2):
-            self.selected_path2 = sel_path;
+            self.update_currentpath2(sel_path);
+            self.update_currentpath2_inputbox(sel_path);
 
     def tableSpecificData(self, source):
         sel_path = None;
@@ -68,12 +155,85 @@ class DiffApp(QWidget):
         if (source == self.result_table1):
             textStruct = self.text1Struct;
             sel_path = self.selected_path1;
+            self.update_currentpath1_inputbox(self.selected_path1)
             result_table = self.result_table1;
         if (source == self.result_table2):
             textStruct = self.text2Struct;
             sel_path = self.selected_path2;
+            self.update_currentpath2_inputbox(self.selected_path2)
             result_table = self.result_table2;
         return sel_path, textStruct, result_table;
+
+    def synchronize_panels(self, source_table):
+        if self.syncPanels.isChecked():
+            print("Synchronizing...")
+            target_table = self.result_table2 if source_table == self.result_table1 else self.result_table1
+            another_panel_data = self.fetch_table_specific_data(target_table)
+
+            self.print_selected_path(another_panel_data['selected_path'])
+            constructed_path = self.construct_path(source_table, another_panel_data['shortest_path'])
+            self.print_constructed_path(constructed_path)
+
+            if self.is_path_valid(another_panel_data['text_struct'], constructed_path):
+                self.update_selected_path(source_table, constructed_path)
+                self.populate_table(target_table, another_panel_data['text_struct'], constructed_path)
+
+    def fetch_table_specific_data(self, result_table):
+        return self.tableSpecificData(result_table)
+
+    def print_selected_path(self, path):
+        print(f"Selected path={path}")
+
+    def print_constructed_path(self, path):
+        print(f"Constructed path={path}")
+
+    def construct_path(self, source_table, shortest_path):
+        source_selected_path = self.selected_path1 if source_table == self.result_table1 else self.selected_path2
+        source_shortest_path = self.shortest_path1 if source_table == self.result_table1 else self.shortest_path2
+        if source_selected_path.startswith(source_shortest_path):
+            return shortest_path + source_selected_path.removeprefix(source_shortest_path)
+        return source_selected_path
+
+    def is_path_valid(self, text_struct, path):
+        return text_struct.get(path) and text_struct[path].get('files')
+
+    def update_selected_path(self, source_table, constructed_path):
+        if source_table == self.result_table1:
+            self.selected_path2 = constructed_path
+            self.update_currentpath2_inputbox(self.selected_path2)
+        else:
+            self.selected_path1 = constructed_path
+            self.update_currentpath1_inputbox(self.selected_path1)
+
+    def populate_table(self, result_table, text_struct, path):
+        self.add_dir_contents(result_table, text_struct, path)
+
+    def synchronize_panel(self, numPanel):
+        if numPanel == 1:
+            ourpath, theirpath, ourshortestpath, theirshortestpath, theirtable = (self.selected_path1, self.selected_path2,
+                                                                                  self.shortest_path1, self.shortest_path2,
+                                                                                  self.result_table2
+                                                                                  )
+        if numPanel == 2:
+            ourpath, theirpath, ourshortestpath, theirshortestpath, theirtable = (self.selected_path2, self.selected_path1,
+                                                                                  self.shortest_path2, self.shortest_path1,
+                                                                                  self.result_table1
+                                                                                  )
+        anotherPanel_selected_path, anotherPanel_textStruct, anotherPanel_result_table = self.tableSpecificData(theirtable)
+        constructedPath = ourpath;
+        if constructedPath.startswith(ourshortestpath):
+            constructedPath = theirshortestpath + constructedPath.removeprefix(ourshortestpath);
+        if anotherPanel_textStruct[constructedPath] is not None:
+            if anotherPanel_textStruct[constructedPath]['files'] is not None:
+                if numPanel == 1:
+                    self.selected_path2 = constructedPath;
+                    self.update_currentpath2_inputbox(self.selected_path2)
+                    self.add_dir_contents(anotherPanel_result_table, anotherPanel_textStruct, self.selected_path2);
+
+            if numPanel == 2:
+                    self.selected_path1 = constructedPath;
+                    self.update_currentpath1_inputbox(self.selected_path1)
+                    self.add_dir_contents(anotherPanel_result_table, anotherPanel_textStruct, self.selected_path1);
 
     def customKeyPressEvent(self, source_table, event):
 
@@ -83,7 +243,19 @@ class DiffApp(QWidget):
             # Получите текущую выбранную ячейку
             current_item = result_table.currentItem()
             if current_item:
+                row = current_item.row()
                 self.refresh_table(result_table, current_item);
+
+                if self.syncPanels.checkState() == Qt.Checked:
+                    print("synchronizing...")
+
+                    if source_table == self.result_table1:
+                        self.synchronize_panel(1)
+                    if source_table == self.result_table2:
+                        self.synchronize_panel(2)
+
+
+
                 # event.accept()
                 return;
         elif event.key() == Qt.Key_Space:
@@ -95,7 +267,7 @@ class DiffApp(QWidget):
         super().keyPressEvent(event)
 
     def docompare(self):
-        compare(self.text1Struct, self.text2Struct)
+        compare(self.selected_path1, self.selected_path2, self.text1Struct, self.text2Struct)
         self.add_dir_contents(self.result_table1, self.text1Struct, self.selected_path1);
         self.add_dir_contents(self.result_table2, self.text2Struct, self.selected_path2);
 
@@ -118,8 +290,10 @@ class DiffApp(QWidget):
             row = current_item.row()
             folder = result_table.item(row, 0).text();
             was_it_selected = -1;
-            if folder != "..":
-              was_it_selected = textStruct[selected_path]['files'][folder]['selected'];
+
+            if folder != ".." and textStruct[selected_path]['files'][folder]['autoselected'] != 1:
+              was_it_selected = textStruct[selected_path]['files'][folder]['selected']
+
             #print("was it selected:"+str(was_it_selected));
             # print(folder);
             at_least_one_selected = 0;
@@ -142,6 +316,7 @@ class DiffApp(QWidget):
 
             if was_it_selected != -1 and textStruct.get(selected_path) is not None:
                 for file_info in textStruct[selected_path]['files'].values():
+                   print ("textStruct["+selected_path+"]['files']["+file_info['filename']+"]['autoselected']=" +  str(was_it_selected) )
                    textStruct[selected_path]['files'][file_info['filename']]['autoselected'] = was_it_selected;
             if at_least_one_selected == 1 and folder_to_select != "..":
                 textStruct[selected_path]['files'][folder_to_select]['autoselected'] = 1;
@@ -167,19 +342,20 @@ class DiffApp(QWidget):
 
         if current_item:
             row = current_item.row()
-            filename = result_table.item(row, 0).text();
-            item = result_table.item(row, 0)
-            # print(selected_path + filename);
-            current_status = textStruct[selected_path]['files'][filename]['selected'];
-            # print("current_status is "+str(current_status));
-            if current_status == 0:
-                textStruct[selected_path]['files'][filename]['selected'] = 1;
-                add_marks_to_all_folders(textStruct, selected_path, 1);
-                item.setForeground(QBrush(QColor(255, 0, 0)))
-            else:
-                textStruct[selected_path]['files'][filename]['selected'] = 0;
-                add_marks_to_all_folders(textStruct, selected_path, -1);
-                item.setForeground(QBrush(QColor(255, 255, 255)))
+            if current_item.text() != "..":
+                filename = result_table.item(row, 0).text();
+                item = result_table.item(row, 0)
+                # print(selected_path + filename);
+                current_status = textStruct[selected_path]['files'][filename]['selected'];
+                # print("current_status is "+str(current_status));
+                if current_status == 0:
+                    textStruct[selected_path]['files'][filename]['selected'] = 1;
+                    add_marks_to_all_folders(textStruct, selected_path, 1);
+                    item.setForeground(QBrush(QColor(255, 0, 0)))
+                else:
+                    textStruct[selected_path]['files'][filename]['selected'] = 0;
+                    add_marks_to_all_folders(textStruct, selected_path, -1);
+                    item.setForeground(QBrush(QColor(255, 255, 255)))
         self.set_cursor_to_row(result_table, row + 1);
 
     def read_file_content(self, file_path_widget):
@@ -199,6 +375,10 @@ class DiffApp(QWidget):
             dirs = []
             files = []
 
+            print(path,content);
+
+            if content.get('files') is None:
+                continue;
             for filename, file_info in content['files'].items():
                 if file_info['permissions'].startswith('d'):
                     dirs.append((filename, file_info))
@@ -219,26 +399,86 @@ class DiffApp(QWidget):
 
         return sorted_directories
 
+    def removeIgnored(self, textStruct, regexp):
+        # Компилируем регулярное выражение заранее для повышения производительности
+        patternSome = re.compile(regexp)
+
+
+        # Функция для рекурсивного удаления элементов, подходящих под регулярное выражение
+
+        def remove_items(directories, path, pattern):
+            patternAll = re.compile(".*")
+            paths_to_remove = []  # Список путей для удаления
+            path1 = path;
+            if (pattern == patternSome):
+                while (path1 != "/" and path1 != "./"):
+                    lastComponent = get_last_element(path1);
+                    if directories.get(path1) is not None:
+                        if pattern.match(lastComponent):
+                            paths_to_remove.append((path1, ""));
+                            remove_items(directories, path1, patternAll)
+                    path1 = remove_last_folder(path1);
+
+
+            for filename, file_info in directories.get(path, {}).get('files', {}).items():
+                if pattern.match(filename):
+                    # Если имя файла или директории подходит под регулярное выражение, помечаем для удаления
+                    paths_to_remove.append((path, filename))
+                    if file_info['permissions'].startswith('d'):
+                        subpath = path + filename + "/"
+                        print("removing subfolders..." + subpath)
+                        paths_to_remove.append((subpath, ""));
+
+                        remove_items(directories, subpath, patternAll)
+
+            # Удаляем файлы и папки, помеченные для удаления
+            for path, filename in paths_to_remove:
+                if filename == "":
+                    print ("deleting dir "+path)
+                    if directories.get(path) is  None:
+                        continue;
+                    del directories[path];
+                    continue;
+                if path:
+                    # Удаление файла или папки в поддиректории
+                    print("deleting "+path + filename)
+                    if directories.get(path) is  None or directories[path].get('files') is None or directories[path]['files'].get(filename) is None:
+                            continue;
+                    del directories[path]['files'][filename]
+                else:
+                    # Удаление файла или папки в корневом каталоге
+
+                    print("deleting "+path + filename)
+
+                    del directories['files'][filename]
+
+        # Запускаем процесс удаления на корневом уровне структуры
+        for path in list(textStruct.keys()):
+            remove_items(textStruct, path, patternSome)
+
 
     def process_raw_data(self):
 
         #text1 = self.text_area1.toPlainText().splitlines()
         #text2 = self.text_area2.toPlainText().splitlines()
 
-        selected_path1 = "./";
-        selected_path2 = "./";
-
         if (self.file_path1.text() is not None):
             text1 = self.read_file_content(self.file_path1)
-            self.text1Struct = ls_lR_macOSParser_preprocessStructure(text1);
+            self.selected_path1, self.text1Struct = parser(text1);
+            self.shortest_path1 = self.selected_path1;
+            self.update_currentpath1_inputbox(self.selected_path1)
+            self.removeIgnored(self.text1Struct, self.ignoreRegexp.text());
             self.text1Struct = self.sort_by_name(self.text1Struct)
-            self.add_dir_contents(self.result_table1, self.text1Struct, selected_path1);
+            self.add_dir_contents(self.result_table1, self.text1Struct, self.selected_path1);
 
         if (self.file_path2.text() != ""):
             text2 = self.read_file_content(self.file_path2)
-            self.text2Struct = ls_lR_macOSParser_preprocessStructure(text2);
+            self.selected_path2,self.text2Struct = parser(text2);
+            self.shortest_path2 = self.selected_path2;
+            self.update_currentpath2_inputbox(self.selected_path2)
+            self.removeIgnored(self.text1Struct, self.ignoreRegexp.text());
             self.text2Struct = self.sort_by_name(self.text2Struct)
-        self.add_dir_contents(self.result_table2, self.text2Struct, selected_path2);
+        self.add_dir_contents(self.result_table2, self.text2Struct, self.selected_path2);
 
 
     def add_dir_contents(self, result_table, directories, dir_path):
@@ -293,7 +533,7 @@ class DiffApp(QWidget):
                     item.setForeground(QBrush(QColor(128, 0, 0)))
 
                 rowCnt += 1
-                #result_table.setRowCount(rowCnt)
+                result_table.setRowCount(rowCnt)
     def select_file(self, line_edit):
         file_name, _ = QFileDialog.getOpenFileName(self)
         if file_name:
@@ -312,6 +552,31 @@ class DiffApp(QWidget):
         self.result_table2.setColumnWidth(0, width1)
         self.result_table2.setColumnWidth(1, width2)
 
+    def update_shortestpath1(self, var):
+        self.shortest_path1 = var;
+    def update_shortestpath2(self, var):
+        self.shortest_path2 = var;
+    def update_currentpath1(self, var):
+        self.selected_path1 = var;
+    def update_currentpath2(self, var):
+        self.selected_path2 = var;
+
+    def update_currentpath1_inputbox(self, new_value):
+        self.currentpath1.textChanged.disconnect()
+        self.currentpath1.setText(new_value)
+        self.currentpath1.textChanged.connect(self.update_currentpath1)
+    def update_currentpath2_inputbox(self, new_value):
+        self.currentpath2.textChanged.disconnect()
+        self.currentpath2.setText(new_value)
+        self.currentpath2.textChanged.connect(self.update_currentpath2)
+    def update_shortestpath1_inputbox(self, new_value):
+        self.currentpath1.textChanged.disconnect()
+        self.currentpath1.setText(new_value)
+        self.currentpath1.textChanged.connect(self.update_shortestpath1)
+    def update_shortestpath2_inputbox(self, new_value):
+        self.currentpath2.textChanged.disconnect()
+        self.currentpath2.setText(new_value)
+        self.currentpath2.textChanged.connect(self.update_shortestpath2)
 
 app = QApplication(sys.argv)
 window = DiffApp(sys.argv)

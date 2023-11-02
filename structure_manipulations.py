@@ -1,3 +1,14 @@
+def remove_last_folder(path: str) -> str:
+    parts = path.split('/')
+    parts = parts[:-2] if parts[-1] == '' else parts[:-1]
+    return '/'.join(parts) + '/'
+
+def get_last_element(path: str) -> str:
+    parts = path.split('/')
+    if parts[-1] == '':
+        return parts[-2]
+    else:
+        return parts[-1]
 def add_size_to_all_folders(directories, current_path, size):
     # Разделите текущий путь на части
     parts = current_path.split('/')

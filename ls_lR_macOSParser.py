@@ -7,6 +7,8 @@ def preprocessStructure(input_text):
     simplified_output = []
     current_path = './'
     for line in lines:
+        if line.startswith(" Directory of "):
+            raise Exception("this is not a MacOS/Linux format")
         if not line:
             continue
         if line.startswith('./'):
@@ -31,8 +33,16 @@ def preprocessStructure(input_text):
 
         filename = ' '.join(remaining)
 
+        filename = filename.strip();
+
+        if filename.endswith("*"): # win-bash adds it to some files
+            filename = filename.rstrip("*");
+
         if current_path not in directories:
             directories[current_path] = {'files': {}, 'size': 0}
+
+        if filename.endswith("/"): # this is the case for win-bash
+            filename = filename.rstrip("/");
 
         directories[current_path]['files'][filename] = {
             'filename': filename,

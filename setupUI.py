@@ -1,9 +1,15 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QTableWidget
+from PyQt5.QtWidgets import QTableWidget, QLabel, QCheckBox, QComboBox
 from PyQt5.QtWidgets import QVBoxLayout, QPushButton, QGridLayout, QLineEdit
 
 from customTableWidget import CustomTableWidget;
 
+CSV = "csv";
+BASH_ZIP_SELECTED = "bash: zip selected";
+BASH_COPY_SELECTED_TO_CURRENT = "bash: copy selected to .";
+BASH_COPY_SELECTED_TO_ANOTHER = "bash: copy selected to another panel";
+BASH_CREATE_MD5 = "bash: create md5sum(selected)";
 
 def setupUI(diffApp, argv):
     # Установка интерфейса
@@ -26,6 +32,20 @@ def setupUI(diffApp, argv):
     grid_layout.addWidget(diffApp.select_file_button1, 0, 1)
     grid_layout.addWidget(diffApp.file_path2, 1, 0)
     grid_layout.addWidget(diffApp.select_file_button2, 1, 1)
+
+    ignoreRegexpLabel = QLabel('Ignore files (regexp):')
+
+    diffApp.ignoreRegexp = QLineEdit(diffApp)
+    diffApp.ignoreRegexp.setText("^[\.]")
+    grid_layout.addWidget(ignoreRegexpLabel)
+    grid_layout.addWidget(diffApp.ignoreRegexp)
+
+    syncPanelsLabel = QLabel('Synchronize panels when navigating')
+    diffApp.syncPanels = QCheckBox(diffApp)
+    diffApp.syncPanels.setCheckState(Qt.Checked)
+    grid_layout.addWidget(syncPanelsLabel)
+    grid_layout.addWidget(diffApp.syncPanels)
+
 
     layout.addLayout(grid_layout)
 
@@ -58,8 +78,64 @@ def setupUI(diffApp, argv):
     diffApp.result_table2.setFont(monospace_font)
 
     grid_layout2 = QGridLayout()
-    grid_layout2.addWidget(diffApp.result_table1, 0, 0)
-    grid_layout2.addWidget(diffApp.result_table2, 0, 1)
+
+    diffApp.shortestpath1 = QLineEdit(diffApp)
+    diffApp.shortestpath2 = QLineEdit(diffApp)
+
+    diffApp.currentpath1 = QLineEdit(diffApp)
+    diffApp.currentpath2 = QLineEdit(diffApp)
+
+    l = 0;
+
+    grid_layout2.addWidget(diffApp.shortestpath1, l, 0)
+    grid_layout2.addWidget(diffApp.shortestpath2, l, 1)
+
+    diffApp.shortestpath1.textChanged.connect(diffApp.update_shortestpath1);
+    diffApp.shortestpath2.textChanged.connect(diffApp.update_shortestpath2);
+
+    l+=1;
+
+    grid_layout2.addWidget(diffApp.currentpath1, l, 0)
+    grid_layout2.addWidget(diffApp.currentpath2, l, 1)
+
+    diffApp.currentpath1.textChanged.connect(diffApp.update_currentpath1);
+    diffApp.currentpath2.textChanged.connect(diffApp.update_currentpath2);
+
+    l+=1;
+
+    grid_layout2.addWidget(diffApp.result_table1, l, 0)
+    grid_layout2.addWidget(diffApp.result_table2, l, 1)
+
+    diffApp.exportSelectedAsSelectBox1 = QComboBox(diffApp);
+    diffApp.exportSelectedAsSelectBox1.addItem(CSV)
+    diffApp.exportSelectedAsSelectBox1.addItem(BASH_ZIP_SELECTED)
+    diffApp.exportSelectedAsSelectBox1.addItem(BASH_COPY_SELECTED_TO_CURRENT)
+    diffApp.exportSelectedAsSelectBox1.addItem(BASH_COPY_SELECTED_TO_ANOTHER)
+    diffApp.exportSelectedAsSelectBox1.addItem(BASH_CREATE_MD5)
+
+    diffApp.exportSelectedAsSelectBox2 = QComboBox(diffApp);
+    diffApp.exportSelectedAsSelectBox2.addItem(CSV)
+    diffApp.exportSelectedAsSelectBox2.addItem(BASH_ZIP_SELECTED);
+    diffApp.exportSelectedAsSelectBox2.addItem(BASH_COPY_SELECTED_TO_CURRENT);
+    diffApp.exportSelectedAsSelectBox2.addItem(BASH_COPY_SELECTED_TO_ANOTHER)
+    diffApp.exportSelectedAsSelectBox2.addItem(BASH_CREATE_MD5)
+
+    l+=1;
+
+    grid_layout2.addWidget(diffApp.exportSelectedAsSelectBox1, l, 0)
+    grid_layout2.addWidget(diffApp.exportSelectedAsSelectBox2, l, 1)
+
+    diffApp.exportSelectedButton1 = QPushButton("Export", diffApp)
+    diffApp.exportSelectedButton2 = QPushButton("Export", diffApp)
+    diffApp.exportSelectedButton1.clicked.connect(diffApp.export_selected1)
+    diffApp.exportSelectedButton2.clicked.connect(diffApp.export_selected2)
+
+    l+=1;
+
+    grid_layout2.addWidget(diffApp.exportSelectedButton1, l, 0)
+    grid_layout2.addWidget(diffApp.exportSelectedButton2, l, 1)
+
+
     layout.addLayout(grid_layout2)
     diffApp.setLayout(layout)
 

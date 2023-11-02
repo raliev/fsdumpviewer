@@ -1,0 +1,42 @@
+total 1040
+-rw-r--r--@  1 raufaliev  staff    157 Aug  2  2022 adminserver.bat
+-rwxr-xr-x@  1 raufaliev  staff    290 Aug  2  2022 adminserver.sh
+-rw-r--r--@  1 raufaliev  staff    199 Aug  2  2022 build.number
+-rw-r--r--   1 raufaliev  staff  23508 Dec 16  2021 build.xml
+-rw-------   1 raufaliev  staff  24728 Oct 25  2022 buildold.xml
+-rw-r--r--@  1 raufaliev  staff   1652 Aug  2  2022 env.properties
+-rw-r--r--@  1 raufaliev  staff   5966 Sep  2  2022 extensions.xml
+-rw-r--r--@  1 raufaliev  staff    301 Aug  2  2022 global.properties
+-rw-r--r--@  1 raufaliev  staff    634 Aug  2  2022 hybrisserver.bat
+-rwxr-xr-x@  1 raufaliev  staff    885 Aug  2  2022 hybrisserver.sh
+-rw-r--r--   1 raufaliev  staff  47011 Nov 30  2022 javac.20221130_221535.args
+-rw-r--r--   1 raufaliev  staff  47011 Nov 30  2022 javac.20221130_224313.args
+-rw-r--r--   1 raufaliev  staff  46888 Nov 30  2022 javac.20221130_224449.args
+-rw-r--r--   1 raufaliev  staff  46781 Nov 30  2022 javac.20221130_224556.args
+-rw-r--r--   1 raufaliev  staff  44707 Nov 30  2022 javac.20221130_232150.args
+-rw-r--r--   1 raufaliev  staff  44585 Nov 30  2022 javac.20221130_232249.args
+drwxr-xr-x@  4 raufaliev  staff    128 Aug  2  2022 lib
+-rw-r--r--@  1 raufaliev  staff    572 Aug  2  2022 license.bat
+-rwxr-xr-x@  1 raufaliev  staff    538 Aug  2  2022 license.sh
+-rw-r--r--@  1 raufaliev  staff  25857 Apr  1  2023 platform1.iml
+-rw-r--r--@  1 raufaliev  staff  82675 Aug  2  2022 project.properties
+-rw-r--r--@  1 raufaliev  staff    469 Aug  2  2022 setantenv.bat
+-rw-r--r--@  1 raufaliev  staff    441 Aug  2  2022 setantenv.ps1
+-rw-r--r--@  1 raufaliev  staff   1206 Oct 28  2022 setantenv.sh
+-rwxr-xr-x@  1 raufaliev  staff    121 Aug  2  2022 shutdown.sh
+-rw-r--r--@  1 raufaliev  staff    730 Aug  2  2022 tenant_foo.properties
+-rw-r--r--@  1 raufaliev  staff   3225 Aug  2  2022 tenant_junit.properties
+-rw-r--r--@  1 raufaliev  staff    301 Aug  2  2022 tenant_t1.properties
+-rw-r--r--@  1 raufaliev  staff    297 Aug  2  2022 tenant_t2.properties
+
+./lib:
+total 440
+-rw-r--r--@ 1 raufaliev  staff  224277 Aug  2  2022 ant-contrib-1.0b3.jar
+drwxr-xr-x@ 7 raufaliev  staff     224 Aug  2  2022 dbdriver
+
+./lib/dbdriver:
+total 8200
+-rw-r--r--@ 1 raufaliev  staff     1038 Aug  2  2022 external-dependencies.xml
+-rw-r--r--@ 1 raufaliev  staff  1552127 Aug  2  2022 hsqldb-2.4.1.jar
+-rw-r--r--@ 1 raufaliev  staff  1406197 Aug  2  2022 mssql-jdbc-10.2.0.jre17.jar
+-rw-r--r--@ 1 raufaliev  staff  1231952 Aug  2  2022 ngdbc-2.7.13.jar

@@ -1,0 +1,98 @@
+ Directory of C:\Projects\miew
+
+11/02/2023  10:05 AM    <DIR>          .
+11/02/2023  10:05 AM    <DIR>          ..
+10/30/2023  03:52 PM               135 babel.config.json
+11/13/2022  05:18 PM             3,256 CODE_OF_CONDUCT.md
+09/18/2023  02:30 PM             9,072 CONTRIBUTING.md
+09/18/2023  02:30 PM               265 Dockerfile
+09/18/2023  02:30 PM             1,130 LICENSE.md
+09/18/2023  02:30 PM               608 package.json
+09/18/2023  02:30 PM    <DIR>          packages
+09/18/2023  02:30 PM               286 postcss.config.js
+09/18/2023  02:30 PM             2,029 README.md
+11/13/2022  05:18 PM           235,839 README.png
+09/18/2023  02:30 PM               861 sonar-project.properties
+11/02/2023  10:04 AM            71,470 win-bash.txt
+11/02/2023  10:05 AM                 0 win-cmd.txt
+10/30/2023  03:52 PM           662,771 yarn.lock
+              19 File(s)        990,238 bytes
+
+ Directory of C:\Projects\miew\packages
+
+09/18/2023  02:30 PM    <DIR>          .
+09/18/2023  02:30 PM    <DIR>          ..
+11/02/2023  10:04 AM    <DIR>          app
+11/02/2023  10:04 AM    <DIR>          lib
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\miew\packages\app
+
+11/02/2023  10:04 AM    <DIR>          .
+11/02/2023  10:04 AM    <DIR>          ..
+10/30/2023  02:57 PM             2,330 .eslintrc.js
+09/18/2023  02:30 PM                65 .stylelintrc.js
+09/18/2023  02:30 PM    <DIR>          images
+10/30/2023  02:57 PM               388 jest.config.js
+10/30/2023  03:52 PM             2,558 package.json
+09/18/2023  02:30 PM    <DIR>          src
+10/30/2023  02:57 PM    <DIR>          tools
+10/30/2023  02:57 PM             2,533 webpack.config.js
+09/18/2023  02:30 PM    <DIR>          __test__
+               5 File(s)          7,874 bytes
+
+ Directory of C:\Projects\miew\packages\app\images
+
+09/18/2023  02:30 PM    <DIR>          .
+09/18/2023  02:30 PM    <DIR>          ..
+09/18/2023  02:30 PM            73,799 1AID.png
+09/18/2023  02:30 PM            45,513 1CRN.png
+09/18/2023  02:30 PM            97,620 2BFU.png
+09/18/2023  02:30 PM            78,803 4TNW.png
+09/18/2023  02:30 PM            67,369 5B40.png
+09/18/2023  02:30 PM    <DIR>          colorer
+09/18/2023  02:30 PM             4,762 logo.svg
+09/18/2023  02:30 PM    <DIR>          mode
+09/18/2023  02:30 PM            18,875 serotonin.png
+               7 File(s)        386,741 bytes
+
+ Directory of C:\Projects\miew\packages\app\images\colorer
+
+09/18/2023  02:30 PM    <DIR>          .
+09/18/2023  02:30 PM    <DIR>          ..
+09/18/2023  02:30 PM             8,599 CB.png
+09/18/2023  02:30 PM            10,504 CF.png
+09/18/2023  02:30 PM            15,112 CH.png
+09/18/2023  02:30 PM            13,277 CO.png
+09/18/2023  02:30 PM            17,329 EL.png
+09/18/2023  02:30 PM            17,668 HY.png
+09/18/2023  02:30 PM            12,216 MO.png
+09/18/2023  02:30 PM            14,623 OC.png
+09/18/2023  02:30 PM            18,756 RT.png
+09/18/2023  02:30 PM            18,280 SQ.png
+09/18/2023  02:30 PM            16,542 SS.png
+09/18/2023  02:30 PM            18,784 TM.png
+09/18/2023  02:30 PM             9,949 UN.png
+              13 File(s)        191,639 bytes
+
+ Directory of C:\Projects\miew\packages\app\images\mode
+
+09/18/2023  02:30 PM    <DIR>          .
+09/18/2023  02:30 PM    <DIR>          ..
+09/18/2023  02:30 PM             6,190 BS.png
+09/18/2023  02:30 PM             4,657 CA.png
+09/18/2023  02:30 PM             8,553 CS.png
+09/18/2023  02:30 PM             5,398 LC.png
+09/18/2023  02:30 PM             4,368 LN.png
+09/18/2023  02:30 PM             8,372 QS.png
+09/18/2023  02:30 PM             9,647 SA.png
+09/18/2023  02:30 PM             8,520 SE.png
+09/18/2023  02:30 PM             3,157 TR.png
+09/18/2023  02:30 PM             3,400 TU.png
+09/18/2023  02:30 PM             2,314 TX.png
+09/18/2023  02:30 PM             9,574 VW.png
+              12 File(s)         74,150 bytes
+
+     Total Files Listed:
+            1954 File(s)    146,561,435 bytes
+            1097 Dir(s)  343,226,454,016 bytes free
