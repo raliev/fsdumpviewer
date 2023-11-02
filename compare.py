@@ -223,7 +223,7 @@ class DiffApp(QWidget):
         constructedPath = ourpath;
         if constructedPath.startswith(ourshortestpath):
             constructedPath = theirshortestpath + constructedPath.removeprefix(ourshortestpath);
-        if anotherPanel_textStruct[constructedPath] is not None:
+        if anotherPanel_textStruct.get(constructedPath) is not None:
             if anotherPanel_textStruct[constructedPath]['files'] is not None:
                 if numPanel == 1:
                     self.selected_path2 = constructedPath;
@@ -267,7 +267,16 @@ class DiffApp(QWidget):
         super().keyPressEvent(event)
 
     def docompare(self):
-        compare(self.selected_path1, self.selected_path2, self.text1Struct, self.text2Struct)
+
+        config = {
+            'compare_names': True,
+            'compare_sizes': self.compare_sizes.checkState() == Qt.Checked,
+            'compare_dates': self.compare_modiftime.checkState() == Qt.Checked,
+            'compare_checksums': self.compare_checksums.checkState() == Qt.Checked,
+            'compare_specialmark': self.compare_specialmark.checkState() == Qt.Checked
+        }
+
+        compare(self.selected_path1, self.selected_path2, self.text1Struct, self.text2Struct, config)
         self.add_dir_contents(self.result_table1, self.text1Struct, self.selected_path1);
         self.add_dir_contents(self.result_table2, self.text2Struct, self.selected_path2);
 
@@ -528,6 +537,9 @@ class DiffApp(QWidget):
 
                 if file_info['selected'] > 0:
                     item.setForeground(QBrush(QColor(255, 0, 0)))
+
+                if file_info['selectedSpecialMark'] > 0:
+                    item.setForeground(QBrush(QColor(0, 255, 255)))
 
                 if file_info.get('autoselected') is not None and file_info['autoselected'] > 0:
                     item.setForeground(QBrush(QColor(128, 0, 0)))

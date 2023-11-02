@@ -39,7 +39,8 @@ def preprocessStructure(input_text):
             'date': date,
             'selected': 0,
             'autoselected' : 0,
-            'childselected' : 0
+            'childselected' : 0,
+            'selectedSpecialMark' : 0
         }
 
         add_size_to_all_folders(directories, path, int(size))

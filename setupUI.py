@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QTableWidget, QLabel, QCheckBox, QComboBox
+from PyQt5.QtWidgets import QTableWidget, QLabel, QCheckBox, QComboBox, QWidget, QHBoxLayout
 from PyQt5.QtWidgets import QVBoxLayout, QPushButton, QGridLayout, QLineEdit
 
 from customTableWidget import CustomTableWidget;
@@ -58,9 +58,57 @@ def setupUI(diffApp, argv):
     diffApp.process_button = QPushButton("Process", diffApp)
     diffApp.process_button.clicked.connect(diffApp.process_raw_data)
     layout.addWidget(diffApp.process_button)
+
+    diffApp.compare_sizes = QCheckBox(diffApp)
+    diffApp.compare_sizesLabel = QLabel("compare sizes")
+    diffApp.compare_sizes.setCheckState(Qt.Checked)
+
+    hbox1 = QHBoxLayout()
+    hbox1.addWidget(diffApp.compare_sizes)
+    hbox1.addWidget(diffApp.compare_sizesLabel, 1)
+
+    hboxCb = QHBoxLayout()
+
+    hboxCb.addLayout(hbox1)
+
+    diffApp.compare_modiftime = QCheckBox(diffApp)
+    diffApp.compare_modiftimeLabel = QLabel("compare modif times")
+    diffApp.compare_modiftime.setCheckState(Qt.Unchecked)
+
+    hbox2 = QHBoxLayout()
+    hbox2.addWidget(diffApp.compare_modiftime)
+    hbox2.addWidget(diffApp.compare_modiftimeLabel, 1)
+
+    hboxCb.addLayout(hbox2)
+
+    diffApp.compare_checksums = QCheckBox(diffApp)
+    diffApp.compare_checksumsLabel = QLabel("compare checksums")
+    diffApp.compare_checksums.setCheckState(Qt.Unchecked)
+
+    hbox = QHBoxLayout()
+    hbox.addWidget(diffApp.compare_checksums)
+    hbox.addWidget(diffApp.compare_checksumsLabel, 1)
+
+    hboxCb.addLayout(hbox)
+
+    diffApp.compare_specialmark = QCheckBox(diffApp)
+    diffApp.compare_specialmarkLabel = QLabel("special mark")
+    diffApp.compare_specialmark.setCheckState(Qt.Checked)
+
+    hbox = QHBoxLayout()
+    hbox.addWidget(diffApp.compare_specialmark)
+    hbox.addWidget(diffApp.compare_specialmarkLabel, 1)
+
+    hboxCb.addLayout(hbox)
+
+    layout.addLayout(hboxCb)
+
+
     diffApp.compare_button = QPushButton("Compare", diffApp)
     diffApp.compare_button.clicked.connect(diffApp.docompare)
     layout.addWidget(diffApp.compare_button)
+
+
 
     # Создание таблицы для отображения результатов
     diffApp.result_table1 = CustomTableWidget(0, 3)

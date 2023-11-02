@@ -111,7 +111,8 @@ def preprocessStructureWindows(input_text):
                     'selected': 0,
                     'autoselected' : 0,
                     'childselected' : 0,
-                    'permissions': "-rw-r--r--@"
+                    'permissions': "-rw-r--r--@",
+                    'selectedSpecialMark' : 0
                 }
 
                 add_size_to_all_folders(directories, current_path, size)
@@ -127,7 +128,8 @@ def preprocessStructureWindows(input_text):
                     'selected': 0,
                     'autoselected' : 0,
                     'childselected' : 0,
-                    "permissions": "drw-r--r--@"
+                    "permissions": "drw-r--r--@",
+                    'selectedSpecialMark' : 0
                 }
 
 
@@ -160,7 +162,8 @@ def add_to_structure(directories, path):
                 'selected': 0,
                 'autoselected': 0,
                 'childselected': 0,
-                "permissions": "drw-r--r--@"
+                "permissions": "drw-r--r--@",
+                'selectedSpecialMark' : 0
             });
             if directories[current_path].get('files') is None:
                 directories[current_path]['files'] = {};
@@ -171,5 +174,6 @@ def add_to_structure(directories, path):
                 'selected': 0,
                 'autoselected': 0,
                 'childselected': 0,
-                "permissions": "drw-r--r--@"
+                "permissions": "drw-r--r--@",
+                'selectedSpecialMark' : 0
             }
