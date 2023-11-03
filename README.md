@@ -20,3 +20,25 @@ Suppose you and a colleague are diagnosing issues in a common system and suspect
 In instances where you possess a large collection of media, such as music or video files, and a colleague or friend requires specific items from it, fsdumpviewer simplifies the selection process. 
 
 By generating a snapshot of your file system, you provide an overview of your collection. Once your colleague identifies their items of interest, you can use the utility to assemble a dedicated folder or archive containing just the requested files for easy and efficient sharing.
+
+# Supported formats
+
+## Import
+
+* `ls -lR` on MAC OS X
+* `dir /S` on Windows (Eng, USA). Known issues: CP866 is not supported yet
+* `ls -lR` on Windows, Windows Subsystem for Linux
+
+Also, the system supports checksums generated on MAC OS X using:
+```
+find . -type f -print0 | xargs -0 -P$(sysctl -n hw.ncpu) -n10 shasum -a 256 > ~/checksums.txt
+```
+
+
+
+Not supported yet, but in development:
+
+* Powershell
+* Windows instances with any languages but English set by default
+* CP866
+* Symlinks are not supported
