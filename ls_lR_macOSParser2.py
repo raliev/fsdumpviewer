@@ -45,4 +45,7 @@ def preprocessStructure(input_text):
 
         add_size_to_all_folders(directories, path, int(size))
 
+    if (len(directories) == 0):
+        raise Exception("this is not a MacOS/Linux format. No data was read if attempted")
+
     return directories

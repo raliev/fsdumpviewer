@@ -36,7 +36,7 @@ def setupUI(diffApp, argv):
     ignoreRegexpLabel = QLabel('Ignore files (regexp):')
 
     diffApp.ignoreRegexp = QLineEdit(diffApp)
-    diffApp.ignoreRegexp.setText("^[\.]")
+    diffApp.ignoreRegexp.setText("^\.|^(Generated)|^gensrc$|^classes$|\.class$")
     grid_layout.addWidget(ignoreRegexpLabel)
     grid_layout.addWidget(diffApp.ignoreRegexp)
 

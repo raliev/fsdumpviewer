@@ -135,6 +135,9 @@ def preprocessStructureWindows(input_text):
 
     add_to_structure(directories, shortest_path)
 
+    if (len(directories) == 0):
+        raise Exception("this is not a Windows format. No data was read if attempted")
+
     return shortest_path, directories
 
 

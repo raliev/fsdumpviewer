@@ -13,8 +13,9 @@ def compare(roota, rootb, a, b, config):
             if file_a['date'] != file_b['date']:
                 return False
         if config.get('compare_checksums') :
-            if file_a['checksum'] != file_b['checksum']:
-                return False
+            if file_a.get('checksum') is not None and file_b.get('checksum') is not None:
+                if file_a['checksum'] != file_b['checksum']:
+                    return False
         # Here we could add 'compare_checksums' and other comparisons if needed
         return True
 

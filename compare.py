@@ -410,6 +410,8 @@ class DiffApp(QWidget):
 
     def removeIgnored(self, textStruct, regexp):
         # Компилируем регулярное выражение заранее для повышения производительности
+        if (regexp == ""):
+             return;
         patternSome = re.compile(regexp)
 
 
@@ -485,7 +487,7 @@ class DiffApp(QWidget):
             self.selected_path2,self.text2Struct = parser(text2);
             self.shortest_path2 = self.selected_path2;
             self.update_currentpath2_inputbox(self.selected_path2)
-            self.removeIgnored(self.text1Struct, self.ignoreRegexp.text());
+            self.removeIgnored(self.text2Struct, self.ignoreRegexp.text());
             self.text2Struct = self.sort_by_name(self.text2Struct)
         self.add_dir_contents(self.result_table2, self.text2Struct, self.selected_path2);
 
