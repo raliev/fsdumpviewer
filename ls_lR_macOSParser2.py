@@ -17,6 +17,9 @@ def preprocessStructure(input_text):
         # Пропускаем идентификатор узла файловой системы, номер индексного дескриптора и владельца группы, так как они не требуются
         permissions, _, owner, _, size, month, day, time_or_year, *path_parts = parts[2:]
 
+        if permissions.startswith('d'):
+            size = 0 #we zero size because the number next to the directory name is not actually a size in Kb.
+
         # Собираем полный путь и отделяем имя файла
         full_path = ' '.join(path_parts)
         if full_path == ".":

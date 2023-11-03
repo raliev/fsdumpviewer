@@ -20,6 +20,9 @@ def preprocessStructure(input_text):
         permissions, _, owner, _, size, month, day, *remaining = parts
         year_or_time = remaining[0]
 
+        if permissions.startswith('d'):
+            size = 0 #we zero size because the number next to the directory name is not actually a size in Kb.
+
         #print(year_or_time)
 
 

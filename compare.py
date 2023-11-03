@@ -298,6 +298,15 @@ class DiffApp(QWidget):
         if current_item:
             row = current_item.row()
             folder = result_table.item(row, 0).text();
+
+            if folder == ".":
+                #this is not a valid directory
+                return;
+
+            if folder != ".." and not textStruct[selected_path]['files'][folder]['permissions'].startswith("d") :
+                #this is not a directory
+                return;
+
             was_it_selected = -1;
 
             if folder != ".." and textStruct[selected_path]['files'][folder]['autoselected'] != 1:
