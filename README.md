@@ -15,6 +15,21 @@ When facing a situation where you need to extract specific files from a remote s
 
 Suppose you and a colleague are diagnosing issues in a common system and suspect that discrepancies in configurations or environments might be the culprit, but pinpointing the exact differences is challenging. With fsdumpviewer, each of you can take a snapshot of your respective file systems and perform a comparison. The tool will highlight the variances, allowing you to compile a list of divergent files or generate a script for your colleague to extract the missing elements on your side, facilitating a synchronized work environment.
 
+You may say that `rsync` is a right tool for that. However, the key difference between this application and tools like rsync mainly revolve around the user interface, interaction method, and functionality focus.
+
+The application provides a GUI that can visualize the file system as a tree, which can make it easier for users to comprehend and navigate the structure of directories and files. With this app, you can visually compare two directory trees and highlight differences quickly and manually exclude the differences you might find non-relevant. 
+
+By parsing ls -lR and dir /S, the application can compare file system snapshots from different operating systems, such as MacOS and Windows. After comparison and selection, the application can generate custom scripts in different forms and for different OSes to execute the desired file operations such as picking the highlighted files preserving the hierarchy, which provides a more tailored approach than the one-size-fits-all sync provided by rsync.
+
+## Use case Monitor and record alterations in the file system over a given period
+
+The change detection feature of your application serves to monitor and record alterations in the file system. 
+
+Monitoring changes: You can track any additions, deletions, or modifications made to files or directories by comparing the outputs of `ls -lR` or `dir /S` from the different moments of time. 
+By comparing the current state of the file system against a known good snapshot, unauthorized or malicious changes can be quickly detected and highlighted.
+
+The alternative way of doing this job is using the tools like `diff` or utilizing a version control system like GIT or using custom File Integrity Monitoring tools. Our tool automates the comparison, reducing time and effort,can monitor any directory or file system, regardless of whether it's part of a VCS repository.
+
 ## Use case Tailored Content Sharing
 
 In instances where you possess a large collection of media, such as music or video files, and a colleague or friend requires specific items from it, fsdumpviewer simplifies the selection process. 

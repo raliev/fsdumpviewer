@@ -24,4 +24,7 @@ class CustomTableWidget(QTableWidget):
         # Forward the event to the parent widget
         self.parent().customKeyPressEvent(self, event)
         super().keyPressEvent(event);
+    def focusOutEvent(self, event):
+        self.clearSelection()
+        super(CustomTableWidget, self).focusOutEvent(event)
 

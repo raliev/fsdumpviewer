@@ -10,7 +10,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog
 from PyQt5.QtWidgets import QTableWidgetItem
 from parser import parser
 from docompare import compare
-from setupUI import setupUI, CSV, BASH_ZIP_SELECTED, BASH_COPY_SELECTED_TO_CURRENT, BASH_COPY_SELECTED_TO_ANOTHER
+from setupUI import setupUI, CSV, BASH_ZIP_SELECTED, BASH_COPY_SELECTED_TO_CURRENT, BASH_COPY_SELECTED_TO_ANOTHER, LSLR_ONLYSELECTED, LSLR_EXCLUDESELECTED
 from structure_manipulations import add_marks_to_all_folders, get_last_element, remove_last_folder;
 import shlex
 
@@ -40,6 +40,53 @@ class DiffApp(QWidget):
             for line in lines:
                 file.write(line + "\n")
 
+    def exportLSLR(self, directories, exportFileName, onlyselected = 0, excludeselected = 0):
+        with open(exportFileName, "w", encoding="utf-8") as file:
+            for path in directories:
+
+                header = [];
+                header.append(path.rstrip("/") + ":\n")
+                header.append("total 0\n");
+                header.append("\n");
+                filelist = [];
+                for filename, file_info in directories[path]['files'].items():
+                    sel = 0;
+                    if (directories[path].get('selected') == 1):
+                        sel = 1; # we assume that any directory shows up as a file item before
+                    if self.compare_specialmark.checkState() == Qt.Checked:
+                        if file_info['selectedSpecialMark'] == 1:
+                            sel = 1;
+                        if file_info['selected'] == 1:
+                            sel = 1;
+                    else:
+                        if file_info['selected'] == 1:
+                            sel = 1;
+                    if file_info['autoselected'] == 1:
+                        sel = 1;
+                    if file_info['childselected'] == 1:
+                        sel = 1;
+                    if (file_info["permissions"].startswith("d")):
+                        directories[path + filename + "/"]['selected'] = 1;
+                    if (sel == 1 and onlyselected == 1) or (sel != 1 and excludeselected == 1):
+                        filelist.append(file_info["permissions"]);
+                        filelist.append(" ");
+                        filelist.append("0");
+                        filelist.append(" ");
+                        filelist.append("dummyuser" if file_info.get("user") is None else file_info["user"])
+                        filelist.append(" ");
+                        filelist.append("dummygroup" if file_info.get("group") is None else file_info["group"]);
+                        filelist.append(" ");
+                        filelist.append(str(file_info['size']));
+                        filelist.append(" ");
+                        filelist.append(file_info['date']);
+                        filelist.append(" ");
+                        filelist.append(file_info['filename']);
+                        filelist.append("\n");
+                if (len(filelist) > 0):
+                    file.writelines(header);
+                    file.writelines(filelist);
+                    file.write("\n");
+
     def produceFilesForExport(self, directories, path, any=0):
         selected_files = []
         if directories.get(path) is None or directories[path].get('files') is None:
@@ -66,12 +113,45 @@ class DiffApp(QWidget):
                 print(zip_command.strip())
 
     def exportZIPSelected(self, lines, exportFileName):
-        self.export_zip_commands(lines, exportFileName, 10)
+        #self.export_zip_commands(lines, exportFileName, 10)
+        self.exportCopySelectedToCurrent(lines, exportFileName);
+        self.addTarGz(exportFileName);
+
+    def addTarGz(self, exportFileName):
+        with open(exportFileName, "a", encoding="utf-8") as file:
+            file.write("tar -cvzf ${TARGETPATH}/archive.tar.gz ${TARGETPATH}/");
 
     def exportCopySelectedToCurrent(self, lines, exportFileName):
+
+        prescript = """
+        if [ -z "$2" ]; then
+        SOURCEPATH=""
+        echo "Source: 'current directory'"
+else
+        SOURCEPATH="$2"
+        echo "Source: $SOURCEPATH"
+fi
+if [ -z "$1" ]; then
+  echo 'Usage: <script> <destinationpath> <sourcepath>'
+  echo "-- sourcepath is optional; it is where your files are. By default, sourcepath is the current directory"
+  echo "-- destinationpath is mandatory; it can be absolute or relative";
+  exit 1;
+fi
+TARGETPATH="$1"
+echo "Destination: $TARGETPATH"
+        """;
+
         with open(exportFileName, "w", encoding="utf-8") as file:
+            for line in prescript.splitlines():
+                file.write(line + "\n");
+            mkdir = {};
             for line in lines:
-                file.write("cp " + shlex.quote(line) + " .\n")
+                path = remove_last_folder(line);
+                if mkdir.get(path) is None:
+                    mkdir[path] = 1;
+                    if path != "./":
+                        file.write("mkdir -p " + "${TARGETPATH}/" + shlex.quote(path)+";\n");
+                file.write("cp ${SOURCEPATH}" + shlex.quote(line) + " ${TARGETPATH}/" + shlex.quote(line) +";\n")
 
     def exportCopySelectedToAnotherPanel(self, lines, exportFileName, anotherPanelNo):
         with open(exportFileName, "w", encoding="utf-8") as file:
@@ -85,6 +165,12 @@ class DiffApp(QWidget):
                 file.write("cp " + shlex.quote(line) + " " + shlex.quote(targetLocation) + "\n")
     def export(self, directories, exportFileName, mode, shortest_path, panelNo):
         selected_files = self.produceFilesForExport(directories, shortest_path, any=0)
+
+        if mode == LSLR_ONLYSELECTED:
+            self.exportLSLR(directories, exportFileName, onlyselected=1);
+        if mode == LSLR_EXCLUDESELECTED:
+            self.exportLSLR(directories, exportFileName, excludeselected=1);
+
         if mode == CSV:
             self.exportCSV(selected_files, exportFileName)
         if mode == BASH_ZIP_SELECTED:
@@ -124,9 +210,11 @@ class DiffApp(QWidget):
             if event.key() == Qt.Key_Tab:
                 if source == self.result_table1:
                     self.setFocusTo(self.result_table2)
+                    self.result_table2.setCurrentCell(self.result_table2.currentItem().row(), 0);
                     return True
                 if source == self.result_table2:
                     self.setFocusTo(self.result_table1)
+                    self.result_table1.setCurrentCell(self.result_table1.currentItem().row(), 0);
                     return True
             if event.key() == Qt.Key_Space:
                 result_table = source
@@ -239,6 +327,19 @@ class DiffApp(QWidget):
 
         selected_path, textStruct, result_table = self.tableSpecificData(source_table)
         current_item = result_table.currentItem()
+        if event.key() == Qt.Key_Tab:
+            current_item = result_table.currentItem()
+            row = current_item.row()
+            if source_table == self.result_table1:
+                self.setFocusTo(self.result_table2)
+                self.result_table1.clearSelection();
+                self.result_table2.setCurrentCell(self.result_table2.currentItem().row(), 0);
+                return
+            if source_table == self.result_table2:
+                self.setFocusTo(self.result_table1)
+                self.result_table2.clearSelection();
+                self.result_table1.setCurrentCell(self.result_table1.currentItem().row(), 0);
+                return
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
             # Получите текущую выбранную ячейку
             current_item = result_table.currentItem()

@@ -27,12 +27,8 @@ def preprocessStructure(input_text):
 
 
         # Проверка на наличие года или времени в строке
-        if ':' in year_or_time:
-            date = f"{day} {month}"
-            remaining = remaining[1:]
-        else:
-            date = f"{day} {month} {year_or_time}"
-            remaining = remaining[1:]
+        date = f"{day} {month} {year_or_time}"
+        remaining = remaining[1:]
 
         filename = ' '.join(remaining)
 

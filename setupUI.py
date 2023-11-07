@@ -5,6 +5,8 @@ from PyQt5.QtWidgets import QVBoxLayout, QPushButton, QGridLayout, QLineEdit
 
 from customTableWidget import CustomTableWidget;
 
+LSLR_ONLYSELECTED = "export to `ls -lR` ONLY selected";
+LSLR_EXCLUDESELECTED = "export to `ls -lR` EXCLUDE selected";
 CSV = "csv";
 BASH_ZIP_SELECTED = "bash: zip selected";
 BASH_COPY_SELECTED_TO_CURRENT = "bash: copy selected to .";
@@ -120,6 +122,11 @@ def setupUI(diffApp, argv):
     diffApp.result_table2.setHorizontalHeaderLabels(["Filename", "Size", "Permissions"])
     diffApp.result_table2.horizontalHeader().setStretchLastSection(True)
     diffApp.result_table2.setEditTriggers(QTableWidget.NoEditTriggers)
+    diffApp.result_table2.installEventFilter(diffApp)
+
+    diffApp.result_table2.setSelectionBehavior(QTableWidget.SelectRows)
+    diffApp.result_table1.setSelectionBehavior(QTableWidget.SelectRows)
+
 
     monospace_font = QFont("Courier New")
     diffApp.result_table1.setFont(monospace_font)
@@ -154,19 +161,19 @@ def setupUI(diffApp, argv):
     grid_layout2.addWidget(diffApp.result_table1, l, 0)
     grid_layout2.addWidget(diffApp.result_table2, l, 1)
 
-    diffApp.exportSelectedAsSelectBox1 = QComboBox(diffApp);
-    diffApp.exportSelectedAsSelectBox1.addItem(CSV)
-    diffApp.exportSelectedAsSelectBox1.addItem(BASH_ZIP_SELECTED)
-    diffApp.exportSelectedAsSelectBox1.addItem(BASH_COPY_SELECTED_TO_CURRENT)
-    diffApp.exportSelectedAsSelectBox1.addItem(BASH_COPY_SELECTED_TO_ANOTHER)
-    diffApp.exportSelectedAsSelectBox1.addItem(BASH_CREATE_MD5)
+    def setupComboBox(comboBox, items):
+        for item in items:
+            comboBox.addItem(item)
 
-    diffApp.exportSelectedAsSelectBox2 = QComboBox(diffApp);
-    diffApp.exportSelectedAsSelectBox2.addItem(CSV)
-    diffApp.exportSelectedAsSelectBox2.addItem(BASH_ZIP_SELECTED);
-    diffApp.exportSelectedAsSelectBox2.addItem(BASH_COPY_SELECTED_TO_CURRENT);
-    diffApp.exportSelectedAsSelectBox2.addItem(BASH_COPY_SELECTED_TO_ANOTHER)
-    diffApp.exportSelectedAsSelectBox2.addItem(BASH_CREATE_MD5)
+    items = [CSV, BASH_ZIP_SELECTED, BASH_COPY_SELECTED_TO_CURRENT, BASH_COPY_SELECTED_TO_ANOTHER, BASH_CREATE_MD5, LSLR_ONLYSELECTED, LSLR_EXCLUDESELECTED]
+
+    # Создаем и настраиваем первый QComboBox
+    diffApp.exportSelectedAsSelectBox1 = QComboBox(diffApp)
+    setupComboBox(diffApp.exportSelectedAsSelectBox1, items)
+
+    # Создаем и настраиваем второй QComboBox
+    diffApp.exportSelectedAsSelectBox2 = QComboBox(diffApp)
+    setupComboBox(diffApp.exportSelectedAsSelectBox2, items)
 
     l+=1;
 
