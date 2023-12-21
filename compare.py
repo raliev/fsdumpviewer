@@ -26,6 +26,9 @@ class DiffApp(QWidget):
     selected_path1 = "./"
     selected_path2 = "./"
 
+    shortest_path1 = "./"
+    shortest_path2 = "./"
+    
     #    selected_path1 = "c:/Windows/"
 
     def __init__(self, argv):
